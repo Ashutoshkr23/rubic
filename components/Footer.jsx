@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Footer() {
-  const images = ["./Dollar.svg","./setting.svg"];
+  const images = ["./Dollar.svg", "./setting.svg"];
   return (
     <div className='bg-bg-black '>
       {/*For mobile and tablet*/}
@@ -59,9 +59,9 @@ function Footer() {
           <p className='text-f-green'>Terms of Service</p>
         </div>
       </div>
-      
-      
-      
+
+
+
       {/*For Laptop*/}
       <div className='hidden lg:block'>
         <div className=" flex flex-row  items-center" style={{ height: '40px', width: '380px', borderRadius: '19px', margin: 'auto', }}>
@@ -117,7 +117,7 @@ function Footer() {
           <p className='text-f-green'>Terms of Service</p>
         </div>
       </div>
-      
+
     </div>
   )
 }
