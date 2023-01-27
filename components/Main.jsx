@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 
 function Main() {
   return (
@@ -13,11 +13,11 @@ function Main() {
                   <p className="text-lg text-slate-600 font-medium">Enter an Amount</p>
               </div>
               <div className="flex flex-row py-4 items-center">
-                  <div className="h-px w-60 bg-white"></div>
+                  <div className="h-px w-60 bg-neutral-400"></div>
                   <button className="relative h-10 w-9 py-2.5 px-3 bg-bg-grey-light rounded-full">
                       <img src="./Switchswaps.svg" alt="Button Image" className=" h-5 w-2.5" />
                   </button>
-                  <div className="h-px w-60 bg-white"></div>
+                  <div className="h-px w-60 bg-neutral-400"></div>
               </div>
               <button className='w-32 h-9  bg-bg-green text-black rounded-full'>Select Token</button>
               <button className='w-full h-12 mt-8  bg-bg-green text-black rounded-full'>Select Token</button>

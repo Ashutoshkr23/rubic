@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   return (
     <div className='bg-bg-black'>
       <Head>
-        <title>Cross-Chain Tech Aggregator</title>
+        <title>Rubic - Cross-Chain Tech Aggregator</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar/>
