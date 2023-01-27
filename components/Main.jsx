@@ -5,8 +5,8 @@ function Main() {
     
     <div className='bg-bg-black w-full h-full pb-20 '>
         {/*For mobile and tablet*/}
-          <div className='lg:hidden' >
-              <div className='bg-bg-grey border border-slate-600 p-6' style={{ height: '440px', width: '334px', borderRadius: '19px', margin: 'auto' }}>
+          <div className='sm:hidden' >
+              <div className='bg-bg-grey border border-slate-600 p-6' style={{ height: '440px', width: 'auto', borderRadius: '19px', margin: '20px' }}>
                   <div className="flex justify-between items-center">
                       <p className="text-lg text-white font-medium">Cross Chain Swaps</p>
                       <img src="./Settings.svg" alt="Image element" className="w-6 h-6" />
@@ -27,7 +27,7 @@ function Main() {
               </div>
           </div>
         {/*For laptop*/}
-          <div className='hidden lg:block'>
+          <div className='hidden sm:block'>
               <div className='bg-bg-grey border border-slate-600 p-6' style={{ height: '320px', width: '565px', borderRadius: '19px', margin: 'auto' }}>
                   <div className="flex justify-between items-center">
                       <p className="text-lg text-white font-medium">Cross Chain Swaps</p>
