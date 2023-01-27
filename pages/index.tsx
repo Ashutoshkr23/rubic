@@ -10,7 +10,7 @@ const Home: NextPage = () => {
     <div className='bg-bg-black'>
       <Head>
         <title>Rubic - Cross-Chain Tech Aggregator</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icon-5.svg" />
       </Head>
       <Navbar/>
       <Main/>
