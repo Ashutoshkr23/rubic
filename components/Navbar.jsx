@@ -3,17 +3,17 @@ import React, { useState } from 'react';
 
 function Navbar() {
 
-    const [isOpen, setIsOpen] = useState(false);
+    
   const [visible, setVisible] = useState(false);
 
   return (
-    <div>
+    <div >
       {/*For mobile and tablet*/}
       <div className='lg:hidden'>
-        <div className='navbar px-8 py-8 bg-bg-black flex justify-items-end max-width-full'>
+        <div className='navbar px-4 py-8 bg-bg-black flex justify-items-end max-width-full'>
           <img className="mr-10 h-10 w-32" src='./rubic-logo.svg' />
         
-        <button className='w-44 h-12 px-9 py-3 ml-auto bg-bg-grey rounded-full text-white'> <img className='w-5 h-6' src='./rubic-light.svg' /><div className='ml-2'>Buy RBC</div></button>
+        <button className='w-24 h-12 px-2 py-3 ml-auto mr-4 bg-bg-grey rounded-full text-white'> <img className='w-4 h-4' src='./rubic-light.svg' /><div className='ml-1'>Buy RBC</div></button>
 
         <div className="relative dropdown dropdown-bottom dropdown-end">
           <button className='w-12 h-12' onClick={() => setVisible(!visible)} >
