@@ -14,6 +14,8 @@ module.exports = {
         "bg-grey-light": "rgba(60, 62, 64, 1)",
         "bg-grey-div": "rgba(38, 40, 41, 1)",
         "bg-grey-option": "rgba(65, 67, 69, 1)",
+        "bg-grey-settings": "rgba(48, 50, 52,1)",
+
 
       },
       colors:{
