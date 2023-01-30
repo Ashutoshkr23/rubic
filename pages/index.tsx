@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Demo from '../components/Demo'
 
+
 const Home: NextPage = () => {
   return (
     <div className='bg-bg-black'>

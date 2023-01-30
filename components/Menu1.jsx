@@ -3,6 +3,19 @@ import React, { useState, useEffect } from 'react';
 function Menu1() {
 
     const [value, setValue] = useState('2%');
+    const [inputValue, setInputValue] = useState('20');
+
+    const handleInput = (e) => {
+        const newValue = e.target.value;
+        if (!isNaN(newValue)) {
+            if (newValue > 240) {
+                setInputValue('240');
+            } else {
+                setInputValue(newValue);
+            }
+        }
+    };
+
 
     const handleChange = (e) => {
         const newValue = e.target.value;
@@ -16,7 +29,7 @@ function Menu1() {
     };
   return (
     <div>
-          <div className='bg-bg-grey border rounded-2xl border-slate-600 py-6 w-80 '>
+          <div className='bg-bg-grey border rounded-2xl border-slate-600  w-80 '>
               <div className='flex px-5 py-5 flex-col'>
 
                   <div className='flex mb-3 items-center flex-column'>
@@ -39,7 +52,14 @@ function Menu1() {
                       <img className="h-4 w-4 ml-1.5 " src="./info.svg" />
                   </div>
                   <div class="flex mb-3 items-center">
-                      <input type="text" class="bg-transparent text-right p-2 rounded-full border-white border mr-2 w-20 h-8" value="20" />
+                      <div className="flex flex-col items-end">
+                          <input
+                              type="text"
+                              value={inputValue}
+                              onChange={handleInput}
+                              className={`bg-transparent h-8 w-20 mr-2 text-right w p-2 border-2 rounded-full border-gray-300  text-lg outline-none focus:border-green-500`}
+                          />
+                      </div>
                       <p className='text-base'>minutes</p>
                   </div>
                   <div className="flex mb-3 items-center">

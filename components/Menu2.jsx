@@ -3,7 +3,7 @@ import React from 'react'
 function Menu2() {
   return (
     <div>
-          <div className='bg-bg-grey-settings border rounded-2xl border-slate-600 py-6 w-80 h-68 '>
+          <div className='bg-bg-grey-settings border rounded-2xl border-slate-600  w-80 h-68 '>
               <div className='flex px-5 py-5 flex-col'>
 
                   <div className='flex mb-3 items-center flex-column'>
