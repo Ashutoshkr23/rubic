@@ -1,6 +1,19 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 
 function Menu1() {
+
+    const [value, setValue] = useState('2%');
+
+    const handleChange = (e) => {
+        const newValue = e.target.value;
+        if (!isNaN(newValue.slice(0, -1)) && newValue.slice(-1) === '%') {
+            if (newValue.slice(0, -1) > 50) {
+                setValue('50%');
+            } else {
+                setValue(newValue);
+            }
+        }
+    };
   return (
     <div>
           <div className='bg-bg-grey border rounded-2xl border-slate-600 py-6 w-80 '>
@@ -12,7 +25,14 @@ function Menu1() {
                   </div>
                   <div class="flex mb-3 items-center">
                       <button class="bg-bg-green h-9 w-16 mr-2.5 rounded-full text-black text-base ">Auto</button>
-                      <input type="text" class="bg-transparent h-8 text-right p-2 rounded-full border-white border flex-grow" value="2%" />
+                      <div className="flex flex-col items-end">
+                          <input
+                              type="text"
+                              value={value}
+                              onChange={handleChange}
+                              className={`bg-transparent h-8 w-52 text-right w p-2 border-2 rounded-full border-gray-300  text-lg outline-none focus:border-green-500`}
+                          />
+                      </div>
                   </div>
                   <div className='flex mb-3 items-center flex-column'>
                       <h3 className='text-base text-white'>Transaction deadline</h3>
