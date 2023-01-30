@@ -7,6 +7,24 @@ function Main() {
 
     const [visible, setVisible] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    
+   
+    const [value, setValue] = useState('Enter the amount');
+
+    const handleChange = (e) => {
+        setValue(e.target.value);
+        if (value === 'Enter the amount') setValue('');
+    };
+
+    const inputRef = React.useRef(null);
+
+    useEffect(() => {
+        if (value === 'Enter the amount') {
+            inputRef.current.setSelectionRange(0, 0);
+        } else {
+            inputRef.current.setSelectionRange(value.length, value.length);
+        }
+    }, [value]);
 
     const handleClick = () => {
         setIsOpen(!isOpen);
@@ -40,7 +58,18 @@ function Main() {
                     </div>
                     <div className="flex flex-col justify-between items-start gap-6 pt-7">
                         <button className='w-32 h-9  bg-bg-green text-black rounded-full'>Select Token</button>
-                        <p className="text-lg text-slate-600 font-medium">Enter an Amount</p>
+                        
+                        <div className="flex flex-col items-center">
+                            <input
+                                type="text"
+                                value={value}
+                                onChange={handleChange}
+                                ref={inputRef}
+                                className="bg-transparent p-2 border-none outline-none text-lg"
+                            />
+                            
+                        </div>
+
                     </div>
                     <div className="flex flex-row py-4 items-center">
                         <div className="h-px w-60 bg-neutral-400"></div>
@@ -79,7 +108,16 @@ function Main() {
                     </div>
                     <div className="flex justify-between items-center pt-7">
                         <button className='w-32 h-9  bg-bg-green text-black rounded-full'>Select Token</button>
-                        <p className="text-lg text-slate-600 font-medium">Enter an Amount</p>
+                        <div className="flex flex-col items-center">
+                            <input
+                                type="text"
+                                value={value}
+                                onChange={handleChange}
+                                ref={inputRef}
+                                className="bg-transparent p-2 border-none outline-none text-lg"
+                            />
+
+                        </div>
                     </div>
                     <div className="flex flex-row py-4 items-center">
                         <div className="h-px w-60 bg-neutral-400"></div>
