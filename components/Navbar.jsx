@@ -4,11 +4,10 @@ import NavbarSettingSm from '../components/NavSettingSm'
 import MenuLg from '../components/MenuLg';
 
 
-function Navbar({ setSwapActive }) {
+function Navbar() {
 
 
   const [visible1, setVisible1] = useState(false);
-  const [swapActive, setSwap] = useState(false);
 
   const [visible, setVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -100,10 +99,7 @@ function Navbar({ setSwapActive }) {
 
           
           <div className="absolute inset-x-1/4" style={{ width: '565px', }}>
-            <button className='btn px-5 border-0 py-3.5 text-white rounded-full bg-bg-black' onClick={() => {
-              setSwap(!swapActive);
-              setSwapActive(!swapActive);
-            }} >Swaps</button>
+            <button className='btn px-5 border-0 py-3.5 text-white rounded-full bg-bg-black'>Swaps</button>
           </div>
           <button className='w-44 h-12 px-9 py-3 ml-auto bg-bg-grey rounded-full text-white'> <img className='w-5 h-6' src='./rubic-light.svg' /><div className='ml-2'>Buy RBC</div></button>
 
