@@ -34,12 +34,14 @@ function Main() {
     };
     return (
 
-        <div className='bg-bg-black w-full h-full pb-20 '>
+        <div className={`w-full h-full pb-20 ${isDarkMode ? 'bg-bg-black' : 'bg-bg-white-dim'}`}>
+            
             {/*For mobile and tablet*/}
             <div className='sm:hidden' >
-                <div className='bg-bg-grey border border-slate-600 p-6' style={{  width: 'auto', borderRadius: '19px', margin: '20px' }}>
+                <div className={`border border-slate-600 p-6 w-auto rounded-3xl m-5 ${isDarkMode ? 'bg-bg-grey' : 'bg-white'}`} >
+                    
                     <div className="flex justify-between items-center">
-                        <p className="text-lg text-white font-medium">Cross Chain Swaps</p>
+                        <p className={`text-${isDarkMode ? "white" : "black"} text-lg font-medium`}>Cross Chain Swaps</p>
 
                         <div className="relative dropdown dropdown-bottom dropdown-end">
                             <button className='w-6 h-6' onClick={handleClick} >
@@ -59,7 +61,7 @@ function Main() {
                         
                     </div>
                     <div className="flex flex-col justify-between items-start gap-6 pt-7">
-                        <button className='w-32 h-9  bg-bg-green text-black rounded-full'>Select Token</button>
+                        <button className='w-32 h-9  bg-bg-green text-black rounded-full'>                        <p className={`text-${isDarkMode ? "white" : "black"} text-lg font-medium`}>Cross Chain</p></button>
                         
                         <div className="flex flex-col items-center">
                             <input
@@ -67,7 +69,7 @@ function Main() {
                                 value={value}
                                 onChange={handleChange}
                                 ref={inputRef}
-                                className="bg-transparent text-right p-2 border-none outline-none text-lg"
+                                className="bg-transparent text-left p-2 border-none outline-none text-lg"
                             />
                             
                         </div>
@@ -75,21 +77,23 @@ function Main() {
                     </div>
                     <div className="flex flex-row py-4 items-center">
                         <div className="h-px w-60 bg-neutral-400"></div>
-                        <button className="relative h-10 w-9 py-2.5 px-3 bg-bg-grey-light rounded-full">
-                            <img src="./Switchswaps.svg" alt="Button Image" className=" h-5 w-2.5" />
+                        <button className={`relative h-10 w-9 py-2.5 px-3 rounded-full ${isDarkMode ? 'bg-bg-grey' : 'bg-bg-white-dim'}`} >
+                        <img src="./Switchswaps.svg" alt="Button Image" className=" h-5 w-2.5" />
                         </button>
                         
                  <div className="h-px w-60 bg-neutral-400"></div>
                     </div>
-                    <button className='w-32 h-9  bg-bg-green text-black rounded-full'>Select Token</button>
-                    <button className='w-full h-12 mt-16  bg-bg-green text-black rounded-full'>Connect Wallet</button>
+                    <button className='w-32 h-9  bg-bg-green text-black rounded-full'>                        <p className={`text-${isDarkMode ? "white" : "black"} text-lg font-medium`}>Select Token</p></button>
+                    <button className='w-full h-12 mt-16  bg-bg-green text-black rounded-full'>                        <p className={`text-${isDarkMode ? "white" : "black"} text-lg font-medium`}>Connect</p></button>
                 </div>
             </div>
             {/*For laptop*/}
             <div className='hidden sm:block'>
-                <div className='bg-bg-grey-settings border border-slate-600 p-6' style={{  width: '565px', borderRadius: '19px', margin: 'auto' }}>
+                <div className={`border border-slate-600 min-w-min p-6 w-min rounded-3xl mx-auto ${isDarkMode ? 'bg-bg-grey' : 'bg-white'}`} >
+
+                
                     <div className="flex justify-between items-center">
-                        <p className="text-lg text-white font-medium">Cross Chain Swaps</p>
+                        <p className={`text-${isDarkMode ? "white" : "black"} text-lg font-medium`}>Cross Chain Swaps</p>
                         
 
 
@@ -123,7 +127,7 @@ function Main() {
                     </div>
                     <div className="flex flex-row py-4 items-center">
                         <div className="h-px w-60 bg-neutral-400"></div>
-                        <button className="relative h-10 w-9 py-2.5 px-3 bg-bg-grey-light rounded-full">
+                        <button className={`relative h-10 w-9 py-2.5 px-3 rounded-full ${isDarkMode ? 'bg-bg-grey' : 'bg-bg-white-dim'}`}>
                             <img src="./Switchswaps.svg" alt="Button Image" className=" h-5 w-2.5" />
                         </button>
                         <div className="h-px w-60 bg-neutral-400"></div>
