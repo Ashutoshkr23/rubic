@@ -32,10 +32,10 @@ function Navbar() {
     <div >
       {/*For mobile and tablet*/}
       <div className='lg:hidden'>
-        <div className='navbar px-4 py-8 bg-bg-black flex justify-items-end max-width-full'>
-          <img className="mr-10 h-10 w-32" src='./rubic-logo.svg' />
+        <div className={'navbar px-4 py-8 bg-bg-black flex justify-items-end max-width-full'}>
+          <img className="mr-10 h-10 w-32" src={isDarkMode ? "./rubic-logo.svg " : " ./Rubic-logo-light.svg "} />
 
-          <button className='w-24 h-12 px-2 py-3 ml-auto mr-4 bg-bg-grey rounded-full text-white'> <img className='w-4 h-4' src='./rubic-light.svg' /><div className='ml-1'>Buy RBC</div></button>
+          <button className='w-24 h-12 px-2 py-3 ml-auto mr-4 bg-bg-grey rounded-full text-white'> <img className='w-4 h-4' src={isDarkMode ? "./rubic-light.svg " : " ./Rubic-box-light.svg "} /><div className='ml-1'>Buy RBC</div></button>
 
           <div className="relative dropdown dropdown-bottom dropdown-end">
             <button className='w-12 h-12' onClick={() => setVisible1(!visible1)} >
@@ -76,7 +76,7 @@ function Navbar() {
       {/*for large screen */}
       <div className='hidden lg:block'>
         <div className='navbar px-8 py-8 bg-bg-black flex justify-items-end max-width-full'>
-          <img className="mr-10 h-10 w-32" src='./rubic-logo.svg' />
+          <img className="mr-10 h-10 w-32" src={isDarkMode ? "./rubic-logo.svg " : " ./Rubic-logo-light.svg "} />
 
           <div className="relative dropdown dropdown-bottom dropdown-end">
             <button className='w-12 h-12 ' onClick={handleClick} >
@@ -103,7 +103,7 @@ function Navbar() {
           <div className="absolute inset-x-1/4" style={{ width: '565px', }}>
             <button className='btn px-5 border-0 py-3.5 text-white rounded-full bg-bg-black'>Swaps</button>
           </div>
-          <button className='w-44 h-12 px-9 py-3 ml-auto bg-bg-grey rounded-full text-white'> <img className='w-5 h-6' src='./rubic-light.svg' /><div className='ml-2'>Buy RBC</div></button>
+          <button className='w-44 h-12 px-9 py-3 ml-auto bg-bg-grey rounded-full text-white'> <img className='w-5 h-6' src={isDarkMode ? "./rubic-light.svg " : " ./Rubic-box-light.svg "} /><div className='ml-2'>Buy RBC</div></button>
 
           <div>
             <button className='w-44 h-12 mx-8 px-9 bg-bg-green text-black rounded-full'>connect wallet</button>

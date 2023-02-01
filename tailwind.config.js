@@ -15,6 +15,10 @@ module.exports = {
         "bg-grey-div": "rgba(38, 40, 41, 1)",
         "bg-grey-option": "rgba(65, 67, 69, 1)",
         "bg-grey-settings": "rgba(48, 50, 52,1)",
+        "bg-white-dim": "rgba(246, 246, 246,1)",
+        "bg-dark": "rgba(0, 0, 0, 1)",
+        "bg-white": "rgba(255, 255, 255, 1)",
+
 
 
       },
