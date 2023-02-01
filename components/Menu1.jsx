@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
+import { DarkModeContext } from "../components/Context";
 
 function Menu1() {
 
     const [value, setValue] = useState('2%');
     const [inputValue, setInputValue] = useState('20');
     const [isToggled, setIsToggled] = useState(false);
+    const { isDarkMode } = useContext(DarkModeContext);
 
     const handleInput = (e) => {
         const newValue = e.target.value;

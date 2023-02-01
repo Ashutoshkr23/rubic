@@ -1,4 +1,5 @@
 import React from 'react'
+import { DarkModeContext } from "../components/Context";
 
 function NavSettingSm() {
   return (

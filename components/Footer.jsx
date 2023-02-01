@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { DarkModeContext } from "../components/Context";
 
 function Footer() {
   const images = ["./Dollar.svg", "./setting.svg"];
+  const { isDarkMode } = useContext(DarkModeContext);
   return (
     <div className='bg-bg-black '>
       {/*For mobile and tablet*/}

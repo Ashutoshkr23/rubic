@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { DarkModeContext } from "../components/Context";
 
 function NavSettingsLg() {
-    const [isToggled, setIsToggled] = useState(false);
+    const { isDarkMode, setDarkMode } = useContext(DarkModeContext);
   return (
     <div>
           <div className='bg-bg-grey-div rounded-box px-5 py-4' style={{ height: '201px', width: '686px', }}>
@@ -20,13 +21,13 @@ function NavSettingsLg() {
                                   <input
                                       type="checkbox"
                                       className="hidden"
-                                      checked={isToggled}
-                                      onChange={() => setIsToggled(!isToggled)}
+                                      checked={isDarkMode}
+                                      onChange={() => setDarkMode(!isDarkMode)}
                                   />
-                                  <span className={`toggle-slider rounded-full w-12 h-6 shadow-inner ${isToggled ? 'bg-white' : 'bg-bg-green'
+                                  <span className={`toggle-slider rounded-full w-12 h-6 shadow-inner ${isDarkMode ? 'bg-bg-green' : 'bg-white'
                                       }`}></span>
                                    <span
-                                      className={`toggle-button absolute w-4 h-4 my-1 rounded-full bg-black shadow inset-y-0 transition-all duration-200 ease-in-out ${isToggled ? 'left-1 ' : 'right-1'
+                                      className={`toggle-button absolute w-4 h-4 my-1 rounded-full bg-black shadow inset-y-0 transition-all duration-200 ease-in-out ${isDarkMode ? 'right-1 ' : 'left-1'
                                           }`}
                                   ></span>
                               </label>

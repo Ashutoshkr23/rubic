@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState , useContext} from 'react';
 import NavbarSettingsLg from '../components/NavSettingsLg'
 import NavbarSettingSm from '../components/NavSettingSm'
 import MenuLg from '../components/MenuLg';
+import { DarkModeContext } from "../components/Context";
 
 
 function Navbar() {
@@ -11,6 +12,7 @@ function Navbar() {
 
   const [visible, setVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const { isDarkMode } = useContext(DarkModeContext);
 
   const handleClick = () => {
     setIsOpen(!isOpen);

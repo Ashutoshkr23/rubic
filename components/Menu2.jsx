@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState , useContext } from 'react';
+import { DarkModeContext } from "../components/Context";
 
 function Menu2() {
     const [isToggled, setIsToggled] = useState(false);
+    const { isDarkMode } = useContext(DarkModeContext);
   return (
     <div>
           <div className='bg-bg-grey-settings border rounded-2xl border-slate-600  w-80 h-68 '>

@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Menu1 from '../components/Menu1'
 import Menu2 from '../components/Menu2'
+import { DarkModeContext } from "../components/Context";
 
 
 function Main() {
 
     const [visible, setVisible] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const { isDarkMode } = useContext(DarkModeContext);
     
    
     const [value, setValue] = useState('Enter the amount');

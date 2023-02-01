@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { DarkModeContext } from "../components/Context";
 
 function MenuLg() {
+  const { isDarkMode } = useContext(DarkModeContext);
   return (
     <div>
           <div className='bg-bg-grey border rounded-2xl border-slate-600 py-6' style={{  width: '231px', }}>
