@@ -18,6 +18,8 @@ module.exports = {
         "bg-white-dim": "rgba(246, 246, 246,1)",
         "bg-dark": "rgba(0, 0, 0, 1)",
         "bg-white": "rgba(255, 255, 255, 1)",
+        "bg-white-setting": "rgba(250, 250, 250, 1)",
+        "bg-white-set-options": "rgba(242, 242, 242, 1)",
 
 
 

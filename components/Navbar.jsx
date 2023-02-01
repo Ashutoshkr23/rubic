@@ -51,8 +51,8 @@ function Navbar() {
 
           <div className="relative dropdown dropdown-bottom dropdown-end">
             <button className='w-12 h-12 ' onClick={handleClick} >
-              <div className="relative btn border-none btn-circle bg-transparent">
-                <div className='  h-3.5 w-5'>
+              <div className={`relative btn border-none btn-circle bg-transparent ${isDarkMode ? 'hover:bg-bg-grey-light' : 'hover:bg-white'}`}>
+              <div className='  h-3.5 w-5'>
                   <div
                     className={` h-0.5 w-5 origin-top-left rounded-md ${isDarkMode ? 'bg-white' : 'bg-black'} ${isOpen ? 'rotate-45 translate-x-px' : 'rotate-0'}`}
                   />
@@ -84,7 +84,7 @@ function Navbar() {
 
           <div className="relative dropdown dropdown-bottom dropdown-end">
             <button className='w-12 h-12 ' onClick={handleClick} >
-              <div className="relative btn border-none btn-circle bg-transparent">
+                <div className={`relative btn border-none btn-circle bg-transparent ${isDarkMode ? 'hover:bg-bg-grey-light' : 'hover:bg-white'}`}>
                 <div className='  h-3.5 w-5'>
                   <div
                     className={` h-0.5 w-5 origin-top-left rounded-md ${isDarkMode ? 'bg-white' : 'bg-black'} ${isOpen ? 'rotate-45 translate-x-px' : 'rotate-0'}`}
@@ -105,7 +105,7 @@ function Navbar() {
 
           
           <div className="absolute inset-x-1/4" style={{ width: '565px', }}>
-            <button className={'btn px-5 border-0 py-3.5 rounded-full bg-transparent '}><p className={`text-${isDarkMode ? "white" : "black"}`}>Swaps</p></button>
+            <button className={`btn px-5 border-0 py-3.5 rounded-full bg-transparent ${isDarkMode ?"hover:bg-bg-grey-light" : "hover:bg-white"}`}><p className={`text-${isDarkMode ? "white" : "black"}`}>Swaps</p></button>
           </div>
           
           <button className={`w-44 h-12 px-9 py-3 ml-auto rounded-full ${isDarkMode ? 'bg-bg-grey' : 'bg-white'}`}> <img className='w-5 h-6' src={isDarkMode ? "./rubic-light.svg " : " ./Rubic-box-light.svg "} /><div className='ml-2'><p className={`text-${isDarkMode ? "white" : "black"}`}>Buy RBC</p></div></button>

@@ -77,13 +77,13 @@ function Main() {
                     </div>
                     <div className="flex flex-row py-4 items-center">
                         <div className="h-px w-60 bg-neutral-400"></div>
-                        <button className={`relative h-10 w-9 py-2.5 px-3 rounded-full ${isDarkMode ? 'bg-bg-grey' : 'bg-bg-white-dim'}`} >
+                        <button className={`relative h-10 w-9 py-2.5 px-3 rounded-full ${isDarkMode ? 'bg-bg-grey-settings' : 'bg-bg-white-dim'}`} >
                         <img src="./Switchswaps.svg" alt="Button Image" className=" h-5 w-2.5" />
                         </button>
                         
                  <div className="h-px w-60 bg-neutral-400"></div>
                     </div>
-                    <button className='w-32 h-9  bg-bg-green text-black rounded-full'>                        <p className={`text-${isDarkMode ? "white" : "black"} text-lg font-medium`}>Select Token</p></button>
+                    <button className='w-32 h-9  bg-bg-green text-black rounded-full'>                        <p className={`text-${isDarkMode ? "white" : "black"} text-lg  font-medium`}>Select Token</p></button>
                     <button className='w-full h-12 mt-16  bg-bg-green text-black rounded-full'>                        <p className={`text-${isDarkMode ? "white" : "black"} text-lg font-medium`}>Connect</p></button>
                 </div>
             </div>
@@ -127,7 +127,7 @@ function Main() {
                     </div>
                     <div className="flex flex-row py-4 items-center">
                         <div className="h-px w-60 bg-neutral-400"></div>
-                        <button className={`relative h-10 w-9 py-2.5 px-3 rounded-full ${isDarkMode ? 'bg-bg-grey' : 'bg-bg-white-dim'}`}>
+                        <button className={`relative h-10 w-9 py-2.5 px-3 rounded-full ${isDarkMode ? 'bg-bg-grey-settings' : 'bg-bg-white-dim'}`}>
                             <img src="./Switchswaps.svg" alt="Button Image" className=" h-5 w-2.5" />
                         </button>
                         <div className="h-px w-60 bg-neutral-400"></div>
