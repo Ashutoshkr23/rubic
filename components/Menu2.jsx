@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 function Menu2() {
+    const [isToggled, setIsToggled] = useState(false);
   return (
     <div>
           <div className='bg-bg-grey-settings border rounded-2xl border-slate-600  w-80 h-68 '>
@@ -19,7 +20,20 @@ function Menu2() {
                           <h3 className="text-base text-white">Show Receivers Address</h3>
                           <img className="h-4 w-4 ml-1.5" src="./info.svg" />
                       </div>
-                      <input type="checkbox" className="toggle ml-auto" checked />
+                      <label className="relative ml-auto inline-flex items-center ">
+                          <input
+                              type="checkbox"
+                              className="hidden"
+                              checked={isToggled}
+                              onChange={() => setIsToggled(!isToggled)}
+                          />
+                          <span className={`toggle-slider rounded-full w-8 h-4 shadow-inner ${isToggled ? 'bg-slate-300' : 'bg-bg-green'
+                              }`}></span>
+                          <span
+                              className={`toggle-button absolute w-3 h-3 my-0.5 rounded-full bg-black shadow inset-y-0 transition-all duration-200 ease-in-out ${isToggled ? 'left-0.5 ' : 'right-0.5'
+                                  }`}
+                          ></span>
+                      </label>
                   </div>
 
 

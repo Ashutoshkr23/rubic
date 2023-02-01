@@ -65,7 +65,7 @@ function Main() {
                                 value={value}
                                 onChange={handleChange}
                                 ref={inputRef}
-                                className="bg-transparent p-2 border-none outline-none text-lg"
+                                className="bg-transparent text-right p-2 border-none outline-none text-lg"
                             />
                             
                         </div>
@@ -114,7 +114,7 @@ function Main() {
                                 value={value}
                                 onChange={handleChange}
                                 ref={inputRef}
-                                className="bg-transparent p-2 border-none outline-none text-lg"
+                                className="bg-transparent text-right p-2 border-none outline-none text-lg"
                             />
 
                         </div>
