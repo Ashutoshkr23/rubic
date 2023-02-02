@@ -47,7 +47,7 @@ function MenuLg() {
 
             <div className='flex h-11 items-center flex-column'>
               <img className="h-5 w-5 mr-4 " src={isDarkMode ? "./icon-1.svg " : " ./icon-1-light.svg "} />
-              <h3 className={`text-lg ${isDarkMode ? "text-white" : "text-black"}`}>Setup Wi</h3>
+              <h3 className={`text-lg ${isDarkMode ? "text-white" : "text-black"}`}>Setup Widget</h3>
             </div>
             <div className='flex h-11 items-center flex-column'>
               <img className="h-5 w-5 mr-4" src={isDarkMode ? "./icon-2.svg " : " ./icon-2-light.svg "} />
