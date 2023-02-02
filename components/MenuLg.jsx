@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
-import { DarkModeContext } from "../components/Context";
+import { DarkModeContext , SwapActiveContext } from "../components/Context";
 
 function MenuLg() {
   const { isDarkMode } = useContext(DarkModeContext);
+  const { swapActive } = useContext(SwapActiveContext);
   return (
     <div>
       <div className={`lg:hidden`}>

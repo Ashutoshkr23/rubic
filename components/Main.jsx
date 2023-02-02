@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Menu1 from '../components/Menu1'
 import Menu2 from '../components/Menu2'
-import { DarkModeContext } from "../components/Context";
+import { DarkModeContext, SwapActiveContext , ShowContentContext } from "../components/Context";
 
 
 function Main() {
@@ -9,6 +9,8 @@ function Main() {
     const [visible, setVisible] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const { isDarkMode } = useContext(DarkModeContext);
+    const { swapActive } = useContext(SwapActiveContext);
+    const { showContent } = useContext(ShowContentContext);
     
    
     const [value, setValue] = useState('Enter the amount');
@@ -52,7 +54,7 @@ function Main() {
                                 </div>
                             </button>
                             <div tabIndex={0} className={`dropdown-content  menu  shadow bg-base-100 rounded-box  ${visible ? 'block' : 'hidden'}`}>
-                                <Menu2/>
+                                {swapActive ? <Menu2 /> : <Menu1 />}
                             </div>
                         </div>
 
@@ -83,8 +85,20 @@ function Main() {
                         
                  <div className="h-px w-60 bg-neutral-400"></div>
                     </div>
-                    <button className='w-32 h-9  bg-bg-green text-black rounded-full'>                        <p className={`text-${isDarkMode ? "white" : "black"} text-lg  font-medium`}>Select Token</p></button>
-                    <button className='w-full h-12 mt-16  bg-bg-green text-black rounded-full'>                        <p className={`text-${isDarkMode ? "white" : "black"} text-lg font-medium`}>Connect</p></button>
+                    <button className='w-32 h-9  mb-8 bg-bg-green text-black rounded-full'>                        <p className={`text-${isDarkMode ? "white" : "black"} text-lg  font-medium`}>Select Token</p></button>
+                    {showContent && (
+                        <div>
+                            <div className='flex h-11 mt-6 '>
+                                <p className={`text-${isDarkMode ? "white" : "black"} text-sm `}>Wallet address in target network</p>
+                                <img className="h-4 w-4 ml-1.5 " src="./info.svg" />
+                            </div>
+                            <div className="flex items-center border border-white relative rounded-full bg-grey-lighter h-11">
+                                <input type="text" className="w-full bg-transparent rounded-full p-2" placeholder="Enter or paste address" />
+                                <img src="./paste.svg" alt="icon" className="w-6 h-6 absolute right-4 mr-2" />
+                            </div>
+                        </div>
+                    )}
+                    <button className='w-full h-12 mt-4  bg-bg-green text-black rounded-full'>                        <p className={`text-${isDarkMode ? "white" : "black"} text-lg font-medium`}>Connect</p></button>
                 </div>
             </div>
             {/*For laptop*/}
@@ -106,7 +120,7 @@ function Main() {
                                 </div>
                             </button>
                             <div tabIndex={0} className={`dropdown-content  menu  shadow bg-base-100 rounded-box  ${visible ? 'block' : 'hidden'}`}>
-                              <Menu1/>
+                                {swapActive ? <Menu2 /> : <Menu1 />}
                             </div>
                         </div>
 
@@ -132,8 +146,21 @@ function Main() {
                         </button>
                         <div className="h-px w-60 bg-neutral-400"></div>
                     </div>
-                    <button className='w-32 h-9  bg-bg-green text-black rounded-full'>Select Token</button>
-                    <button className='w-full h-12 mt-16  bg-bg-green text-black rounded-full'>Connect Wallet</button>
+                    <button className='w-32 h-9 mb-8  bg-bg-green text-black rounded-full'>Select Token</button>
+                    {showContent && (
+                        <div>
+                            <div className='flex h-12 py-3 mt-6 '>
+                                <p className={`text-${isDarkMode ? "white" : "black"} text-sm `}>Wallet address in target network</p>
+                                <img className="h-4 w-4 ml-1.5 " src="./info.svg" />
+                            </div>
+                            <div className="flex items-center border border-white relative rounded-full bg-grey-lighter h-11">
+                                <input type="text" className="w-full bg-transparent rounded-full p-2" placeholder="Enter or paste address" />
+                                <img src="./paste.svg" alt="icon" className="w-6 h-6 absolute right-4 mr-2" />
+                            </div>
+                        </div>
+                    )}
+                    <button className='w-full h-12 mt-4  bg-bg-green text-black rounded-full'>Connect Wallet</button>
+                   
                 </div>
             </div>
         </div>

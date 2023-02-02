@@ -1,11 +1,15 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { DarkModeProvider } from "../components/Context";
+import { DarkModeProvider, ShowContentProvider, SwapActiveProvider } from "../components/Context";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <DarkModeProvider>
-      <Component {...pageProps} />
+      <ShowContentProvider>
+        <SwapActiveProvider>
+          <Component {...pageProps} />
+        </SwapActiveProvider>
+      </ShowContentProvider>
     </DarkModeProvider>
   );
 }

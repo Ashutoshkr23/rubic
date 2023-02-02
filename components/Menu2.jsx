@@ -1,9 +1,10 @@
 import React, { useState , useContext } from 'react';
-import { DarkModeContext } from "../components/Context";
+import { DarkModeContext , ShowContentContext } from "../components/Context";
 
 function Menu2() {
-    const [isToggled, setIsToggled] = useState(false);
-    const { isDarkMode } = useContext(DarkModeContext);
+    const { showContent, setShowContent } = useContext(ShowContentContext);
+
+    
   return (
     <div>
           <div className='bg-bg-grey-settings border rounded-2xl border-slate-600  w-80 h-68 '>
@@ -26,13 +27,13 @@ function Menu2() {
                           <input
                               type="checkbox"
                               className="hidden"
-                              checked={isToggled}
-                              onChange={() => setIsToggled(!isToggled)}
+                              checked={showContent}
+                              onChange={() => setShowContent(!showContent)}
                           />
-                          <span className={`toggle-slider rounded-full w-8 h-4 shadow-inner ${isToggled ? 'bg-slate-300' : 'bg-bg-green'
+                          <span className={`toggle-slider rounded-full w-8 h-4 shadow-inner ${showContent ? 'bg-bg-green' : 'bg-slate-300'
                               }`}></span>
                           <span
-                              className={`toggle-button absolute w-3 h-3 my-0.5 rounded-full bg-black shadow inset-y-0 transition-all duration-200 ease-in-out ${isToggled ? 'left-0.5 ' : 'right-0.5'
+                              className={`toggle-button absolute w-3 h-3 my-0.5 rounded-full bg-black shadow inset-y-0 transition-all duration-200 ease-in-out ${showContent ? 'right-0.5 ' : 'left-0.5'
                                   }`}
                           ></span>
                       </label>

@@ -1,7 +1,7 @@
 import React, { useState , useContext} from 'react';
 import NavbarSettingsLg from '../components/NavSettingsLg'
 import MenuLg from '../components/MenuLg';
-import { DarkModeContext } from "../components/Context";
+import { DarkModeContext , SwapActiveContext } from "../components/Context";
 
 
 function Navbar() {
@@ -12,6 +12,7 @@ function Navbar() {
   const [visible, setVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const { isDarkMode } = useContext(DarkModeContext);
+  const { swapActive, setSwapActive } = useContext(SwapActiveContext);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -105,7 +106,12 @@ function Navbar() {
 
           
           <div className="absolute inset-x-1/4" style={{ width: '565px', }}>
-            <button className={`btn px-5 border-0 py-3.5 rounded-full bg-transparent ${isDarkMode ?"hover:bg-bg-grey-light" : "hover:bg-white"}`}><p className={`text-${isDarkMode ? "white" : "black"}`}>Swaps</p></button>
+            <button
+              className={`btn px-5 border-0 py-3.5 rounded-full  ${swapActive ? "bg-bg-grey-light" : "bg-transparent"} ${isDarkMode ? "hover:bg-bg-grey-light" : "hover:bg-white"}`}
+              onClick={() => setSwapActive(!swapActive)}
+            >
+              <p className={`text-${isDarkMode ? "white" : "black"}`}>Swaps</p>
+            </button>
           </div>
           
           <button className={`w-44 h-12 px-9 py-3 ml-auto rounded-full ${isDarkMode ? 'bg-bg-grey' : 'bg-white'}`}> <img className='w-5 h-6' src={isDarkMode ? "./rubic-light.svg " : " ./Rubic-box-light.svg "} /><div className='ml-2'><p className={`text-${isDarkMode ? "white" : "black"}`}>Buy RBC</p></div></button>
