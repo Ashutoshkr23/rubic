@@ -92,7 +92,7 @@ function Main() {
                                 <p className={`text-${isDarkMode ? "white" : "black"} text-sm `}>Wallet address in target network</p>
                                 <img className="h-4 w-4 ml-1.5 " src="./info.svg" />
                             </div>
-                            <div className="flex items-center border border-white relative rounded-full bg-grey-lighter h-11">
+                            <div className="flex items-center border border-slate-500 relative rounded-full bg-grey-lighter h-11">
                                 <input type="text" className="w-full bg-transparent rounded-full p-2" placeholder="Enter or paste address" />
                                 <img src="./paste.svg" alt="icon" className="w-6 h-6 absolute right-4 mr-2" />
                             </div>
@@ -153,7 +153,7 @@ function Main() {
                                 <p className={`text-${isDarkMode ? "white" : "black"} text-sm `}>Wallet address in target network</p>
                                 <img className="h-4 w-4 ml-1.5 " src="./info.svg" />
                             </div>
-                            <div className="flex items-center border border-white relative rounded-full bg-grey-lighter h-11">
+                            <div className="flex items-center border border-slate-500 relative rounded-full bg-grey-lighter h-11">
                                 <input type="text" className="w-full bg-transparent rounded-full p-2" placeholder="Enter or paste address" />
                                 <img src="./paste.svg" alt="icon" className="w-6 h-6 absolute right-4 mr-2" />
                             </div>

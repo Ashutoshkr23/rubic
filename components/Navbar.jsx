@@ -103,13 +103,16 @@ function Navbar() {
               <MenuLg />
             </div>
           </div>
-
+  
           
           <div className="absolute inset-x-1/4" style={{ width: '565px', }}>
             <button
-              className={`btn px-5 border-0 py-3.5 rounded-full  ${swapActive ? "bg-bg-grey-light" : "bg-transparent"} ${isDarkMode ? "hover:bg-bg-grey-light" : "hover:bg-white"}`}
+              className={`btn px-5 border-0 py-3.5 rounded-full   ${isDarkMode ? ` ${swapActive ? "bg-bg-grey-light" : "bg-transparent"} hover:bg-bg-grey-light` : ` ${swapActive ? "bg-white" : "bg-transparent"}`} hover:bg-white `}
               onClick={() => setSwapActive(!swapActive)}
             >
+              
+              
+
               <p className={`text-${isDarkMode ? "white" : "black"}`}>Swaps</p>
             </button>
           </div>
