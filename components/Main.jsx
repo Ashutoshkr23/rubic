@@ -103,7 +103,7 @@ function Main() {
             </div>
             {/*For laptop*/}
             <div className='hidden sm:block'>
-                <div className={`border border-slate-600 min-w-min p-6 w-min rounded-3xl mx-auto ${isDarkMode ? 'bg-bg-grey' : 'bg-white'}`} >
+                <div className={`border  min-w-min p-6 w-min rounded-3xl mx-auto ${isDarkMode ? 'bg-bg-grey border-slate-600' : 'bg-white border-border-light'}`} >
 
                 
                     <div className="flex justify-between items-center">

@@ -26,6 +26,8 @@ module.exports = {
       },
       colors:{
         "f-green": "rgba(0, 226, 142, 1)",
+        "border-light": "rgba(52, 52, 52, 1)",
+        
       }
     },
   },
