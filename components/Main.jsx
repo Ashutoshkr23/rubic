@@ -36,7 +36,7 @@ function Main() {
     };
     return (
 
-        <div className={`w-full h-full pb-20 ${isDarkMode ? 'bg-bg-black' : 'bg-bg-white-dim'}`}>
+        <div className={`w-full h-screen pb-20 ${isDarkMode ? 'bg-bg-black' : 'bg-bg-white-dim'}`}>
             
             {/*For mobile and tablet*/}
             <div className='sm:hidden' >
