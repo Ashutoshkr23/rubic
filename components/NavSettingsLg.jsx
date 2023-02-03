@@ -1,7 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { DarkModeContext } from "../components/Context";
 
-function NavSettingsLg() {
+function NavSettingsLg(props) {
+    const {visible1, setVisible1} = props;
     const { isDarkMode, setDarkMode } = useContext(DarkModeContext);
     return (
         <div>
@@ -11,7 +12,7 @@ function NavSettingsLg() {
                     <div>
                         <div className="flex justify-between">
                             <p className={`${isDarkMode?"text-black":"text-white"}`}>Settings</p>
-                            <img src="./Close.svg" alt="image" className="w-4 h-4 rounded-full" />
+                            <button onClick={() => setVisible1(!visible1)}><img src={isDarkMode ? "./Close.svg " : " ./Close-light.png "} alt="image" className="w-4 h-4 rounded-full" /></button>
                         </div>
                     </div>
                     <div>
@@ -74,7 +75,7 @@ function NavSettingsLg() {
                     <div>
                         <div className="flex justify-between">
                             <p className={`${isDarkMode ? "text-white" : "text-black"}`}>Settings</p>
-                            <img src="./Close.svg" alt="image" className="w-4 h-4 rounded-full" />
+                            <button onClick={() => setVisible1(!visible1)}><img src={isDarkMode ? "./Close.svg " : " ./Close-light.png "} alt="image" className="w-4 h-4 rounded-full" /></button>
                         </div>
                     </div>
                     <div>

@@ -46,7 +46,7 @@ function Navbar() {
               <img div className='w-6 h-6' src={isDarkMode ? "./setting.svg " : " ./Setting-light.svg "} />
             </button>
             <div tabIndex={0} className={`dropdown-content  menu  shadow bg-base-100 rounded-box  ${visible1 ? 'block' : 'hidden'}`}>
-              <NavbarSettingsLg/>
+              <NavbarSettingsLg visible1={visible1} setVisible1={setVisible1} />
             </div>
           </div>
 
@@ -129,7 +129,7 @@ function Navbar() {
             </button>
             <div tabIndex={0} className={`dropdown-content  menu  shadow bg-base-100 rounded-box  ${visible1 ? 'block' : 'hidden'}`}>
               <div>
-                <NavbarSettingsLg/>
+                <NavbarSettingsLg visible1={visible1} setVisible1={setVisible1}/>
               </div>
 
             </div>
