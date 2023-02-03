@@ -9,7 +9,7 @@ import Demo from '../components/Demo'
 
 const Home: NextPage = () => {
   return (
-    <div className='bg-bg-black h-screen'>
+    <div className='bg-bg-black flex flex-col h-screen'>
       <Head>
         <title>Rubic - Cross-Chain Tech Aggregator</title>
         <link rel="icon" href="/icon-5.svg" />
