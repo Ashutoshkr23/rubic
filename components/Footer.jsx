@@ -5,7 +5,7 @@ function Footer() {
   const images = ["./Dollar.svg", "./setting.svg"];
   const { isDarkMode } = useContext(DarkModeContext);
   return (
-    <div className={` ${isDarkMode ? 'bg-bg-black' : 'bg-bg-white-dim'} fixed bottom-0 w-full`}>
+    <div className={` ${isDarkMode ? 'bg-bg-black' : 'bg-bg-white-dim'}  w-full`}>
       {/*For mobile and tablet*/}
       <div className='lg:hidden'>
         <div className=" flex flex-row flex-wrap justify-center  items-center" style={{ height: '80-px', width: '300px', borderRadius: '19px', margin: 'auto', }}>

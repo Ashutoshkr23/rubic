@@ -9,13 +9,13 @@ import Demo from '../components/Demo'
 
 const Home: NextPage = () => {
   return (
-    <div className='bg-bg-black'>
+    <div className='bg-bg-black h-screen'>
       <Head>
         <title>Rubic - Cross-Chain Tech Aggregator</title>
         <link rel="icon" href="/icon-5.svg" />
       </Head>
       <Navbar/>
-      <Main/>
+      <Main />
       <Footer/>
     </div>
   )
