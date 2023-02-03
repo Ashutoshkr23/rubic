@@ -48,7 +48,7 @@ function Footer() {
             <img src={isDarkMode ? "./youtube.svg " : " ./Youtube-black.svg "} alt="icon" className="w-6 h-6inline-block" />
           </div>
           <div className="w-11 h-8">
-            <img src={isDarkMode ? "./defi-pulse.svg " : " ./Defi-Pulse-black.svg "} alt="icon" className="w-6 h-6 inline-block" />
+            <img src={isDarkMode ? "./defi-pulse.svg " : " ./DeFi-Pulse-black.svg "} alt="icon" className="w-6 h-6 inline-block" />
           </div>
 
 
@@ -106,7 +106,7 @@ function Footer() {
             <img src={isDarkMode ? "./youtube.svg " : " ./Youtube-black.svg "} alt="icon" className="w-6 h-6inline-block" />
           </div>
           <div className="w-11 h-10">
-            <img src={isDarkMode ? "./defi-pulse.svg " : " ./Defi-Pulse-black.svg "} alt="icon" className="w-6 h-6 inline-block" />
+            <img src={isDarkMode ? "./defi-pulse.svg " : " ./DeFi-Pulse-black.svg "} alt="icon" className="w-6 h-6 inline-block" />
           </div>
 
 

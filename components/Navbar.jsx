@@ -38,7 +38,7 @@ function Navbar() {
           <img className="mr-10 h-10 w-32" src={isDarkMode ? "./rubic-logo.svg " : " ./Rubic-logo-light.svg "} />
 
           <button className={`w-24 h-12 px-2 py-3 ml-auto rounded-full ${isDarkMode ? 'bg-bg-grey' : 'bg-white'}`}> 
-             <img className='w-4 h-4' src={isDarkMode ? "./rubic-light.svg " : " ./Rubic-box-light.svg "} /><div className='ml-1'><p className={`text-${isDarkMode ? "White" : "black"}`}>Buy RBC</p></div></button>
+             <img className='w-4 h-4' src={isDarkMode ? "./rubic-light.svg " : " ./rubic-box-light.svg "} /><div className='ml-1'><p className={`text-${isDarkMode ? "White" : "black"}`}>Buy RBC</p></div></button>
 
 
           <div className="relative dropdown ml-4 dropdown-bottom dropdown-end">
@@ -117,7 +117,7 @@ function Navbar() {
             </button>
           </div>
           
-          <button className={`w-44 h-12 px-9 py-3 ml-auto rounded-full ${isDarkMode ? 'bg-bg-grey' : 'bg-white'}`}> <img className='w-5 h-6' src={isDarkMode ? "./rubic-light.svg " : " ./Rubic-box-light.svg "} /><div className='ml-2'><p className={`text-${isDarkMode ? "white" : "black"}`}>Buy RBC</p></div></button>
+          <button className={`w-44 h-12 px-9 py-3 ml-auto rounded-full ${isDarkMode ? 'bg-bg-grey' : 'bg-white'}`}> <img className='w-5 h-6' src={isDarkMode ? "./rubic-light.svg " : " ./rubic-box-light.svg "} /><div className='ml-2'><p className={`text-${isDarkMode ? "white" : "black"}`}>Buy RBC</p></div></button>
 
           <div>
             <button className='w-44 h-12 mx-8 px-6 bg-bg-green text-black rounded-full'><p className={`text-${isDarkMode ? "black" : "white"}`}>Connect Wallet</p></button>
