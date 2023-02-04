@@ -14,40 +14,40 @@ function Footer() {
           <p className='text-f-green'>$306,002,189</p>
         </div>
         <div className="flex flex-row flex-wrap justify-center mx-auto my-4 min-w-0 items-center" style={{ height: '100px', width: '308px', borderRadius: '19px', margin: 'auto' }}>
-          <a href="#" className="w-11 h-8">
+          <a href="https://www.facebook.com/RubicDEX/" target="blank" className="w-11 h-8">
             <img className="w-6 h-6 hover:scale-125 inline-block" src={isDarkMode ? "./fb.svg " : " ./fb-black.svg "} alt="icon" />
           </a>
-          <a href="#" className="w-11 h-8">
+          <a href="https://twitter.com/CryptoRubic" target="blank" className="w-11 h-8">
             <img className="w-6 h-6 hover:scale-125 inline-block" src={isDarkMode ? "./twitter.svg " : " ./Twitter-black.svg "} alt="icon" />
           </a>
-          <a href="#" className="w-11 h-8">
+          <a href="https://www.reddit.com/r/Rubic/new/" target="blank" className="w-11 h-8">
             <img src={isDarkMode ? "./reddit.svg " : " ./Reddit-black.svg "} alt="icon" className=" w-6 h-6 inline-block hover:scale-125" />
           </a>
-          <a href="#" className="w-11 h-8">
+          <a href="https://t.me/cryptorubic_chat" target="blank" className="w-11 h-8">
             <img src={isDarkMode ? "./telegram.svg " : " ./Telegram-black.svg "} alt="icon" className=" w-6 h-6 inline-block hover:scale-125" />
           </a>
-          <a href="#" className="w-11 h-8">
+          <a href="https://dune.com/rubic_exchange/rubic-general-dashboard" target="blank" className="w-11 h-8">
             <img src={isDarkMode ? "./dune.svg " : " ./Dune-black.svg "} alt="icon" className="w-6 h-6 inline-block hover:scale-125" />
           </a>
-          <a href="#" className="w-11 h-8">
+          <a href="mailto:support@rubic.finance" target="blank" className="w-11 h-8">
             <img src={isDarkMode ? "./mail.svg " : " ./Email-black.svg "} alt="icon" className="w-6 h-6 inline-block hover:scale-125" />
           </a>
-          <a href="#" className="w-11 h-8">
+          <a href="https://cryptorubic.medium.com/" target="blank" className="w-11 h-8">
             <img src={isDarkMode ? "./medium.svg " : " ./Medium-black.svg "} alt="icon" className="w-6 h-6 inline-block hover:scale-125" />
           </a>
-          <a href="#" className="w-11 h-8">
+          <a href="https://discord.gg/7EYzPbWKFQ" target="blank" className="w-11 h-8">
             <img src={isDarkMode ? "./discord.svg " : " ./Discord-black.svg "} alt="icon" className="w-6 h-6 inline-block hover:scale-125" />
           </a>
-          <a href="#" className="w-11 h-8">
+          <a href="https://coinmarketcap.com/currencies/rubic" target="blank" className="w-11 h-8">
             <img src={isDarkMode ? "./coinmarket.svg " : " ./Coinmarket-black.svg "} alt="icon" className="w-6 h-6 inline-block hover:scale-125" />
           </a>
-          <a href="#" className="w-11 h-8">
+          <a href="https://www.coingecko.com/en/coins/rubic" target="blank" className="w-11 h-8">
             <img src={isDarkMode ? "./coingecko.svg " : " ./Coingecko-black.svg "} alt="icon" className="w-6 h-6 inline-block hover:scale-125" />
           </a>
-          <a href="#" className="w-11 h-8">
+          <a href="https://www.youtube.com/c/RubicExchange" target="blank" className="w-11 h-8">
             <img src={isDarkMode ? "./youtube.svg " : " ./Youtube-black.svg "} alt="icon" className="w-6 h-6inline-block hover:scale-125" />
           </a>
-          <a href="#" className="w-11 h-8">
+          <a href="https://www.defipulse.com/" target="blank" className="w-11 h-8">
             <img src={isDarkMode ? "./defi-pulse.svg " : " ./DeFi-Pulse-black.svg "} alt="icon" className="w-6 h-6 inline-block hover:scale-125" />
           </a>
 
@@ -72,40 +72,40 @@ function Footer() {
           <p className='text-f-green'>$306,002,189</p>
         </div>
         <div className="flex flex-row flex-wrap mx-auto my-4 min-w-0 items-center" style={{ height: '40px', width: '528px', borderRadius: '19px', margin: 'auto' }}>
-          <a href="#" className="w-11 h-10">
+          <a href="https://www.facebook.com/RubicDEX/" target="blank" className="w-11 h-10">
             <img className="w-6 h-6 hover:scale-125 inline-block" src={isDarkMode ? "./fb.svg " : " ./fb-black.svg "} alt="icon" />
           </a>
-          <a href="#" className="w-11 h-10">
+          <a href="https://twitter.com/CryptoRubic" target="blank" className="w-11 h-10">
             <img className="w-6 h-6 hover:scale-125 inline-block" src={isDarkMode ? "./twitter.svg " : " ./Twitter-black.svg "} alt="icon" />
           </a>
-          <a href="#" className="w-11 h-10">
+          <a href="https://www.reddit.com/r/Rubic/new/" target="blank" className="w-11 h-10">
             <img src={isDarkMode ? "./reddit.svg " : " ./Reddit-black.svg "} alt="icon" className=" w-6 h-6 hover:scale-125 inline-block" />
           </a>
-          <a href="#" className="w-11 h-10">
+          <a href="https://t.me/cryptorubic_chat" target="blank" className="w-11 h-10">
             <img src={isDarkMode ? "./telegram.svg " : " ./Telegram-black.svg "} alt="icon" className=" w-6 h-6 hover:scale-125 inline-block" />
           </a>
-          <a href="#" className="w-11 h-10">
+          <a href="https://dune.com/rubic_exchange/rubic-general-dashboard" target="blank" className="w-11 h-10">
             <img src={isDarkMode ? "./dune.svg " : " ./Dune-black.svg "} alt="icon" className="w-6 h-6 hover:scale-125 inline-block" />
           </a>
-          <a href="#" className="w-11 h-10">
+          <a href="mailto:support@rubic.finance" target="blank" className="w-11 h-10">
             <img src={isDarkMode ? "./mail.svg " : " ./Email-black.svg "} alt="icon" className="w-6 h-6 hover:scale-125 inline-block" />
           </a>
-          <a href="#" className="w-11 h-10">
+          <a href="https://cryptorubic.medium.com/" target="blank" className="w-11 h-10">
             <img src={isDarkMode ? "./medium.svg " : " ./Medium-black.svg "} alt="icon" className="w-6 h-6 hover:scale-125 inline-block" />
           </a>
-          <a href="#" className="w-11 h-10">
+          <a href="https://discord.gg/7EYzPbWKFQ" target="blank" className="w-11 h-10">
             <img src={isDarkMode ? "./discord.svg " : " ./Discord-black.svg "} alt="icon" className="w-6 h-6 hover:scale-125 inline-block" />
           </a>
-          <a href="#" className="w-11 h-10">
+          <a href="https://coinmarketcap.com/currencies/rubic" target="blank" className="w-11 h-10">
             <img src={isDarkMode ? "./coinmarket.svg " : " ./Coinmarket-black.svg "} alt="icon" className="w-6 h-6 hover:scale-125 inline-block" />
           </a>
-          <a href="#" className="w-11 h-10">
+          <a href="https://www.coingecko.com/en/coins/rubic" target="blank" className="w-11 h-10">
             <img src={isDarkMode ? "./coingecko.svg " : " ./Coingecko-black.svg "} alt="icon" className="w-6 h-6 hover:scale-125 inline-block" />
           </a>
-          <a href="#" className="w-11 h-10">
+          <a href="https://www.youtube.com/c/RubicExchange" target="blank" className="w-11 h-10">
             <img src={isDarkMode ? "./youtube.svg " : " ./Youtube-black.svg "} alt="icon" className="w-6 h-6 hover:scale-125 inline-block" />
           </a>
-          <a href="#" className="w-11 h-10">
+          <a href="https://www.defipulse.com/" target="blank" className="w-11 h-10">
             <img src={isDarkMode ? "./defi-pulse.svg " : " ./DeFi-Pulse-black.svg "} alt="icon" className="w-6 h-6 hover:scale-125 inline-block" />
           </a>
 
