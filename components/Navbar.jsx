@@ -69,10 +69,7 @@ function Navbar() {
             <div tabIndex={0} className={`dropdown-content  menu  shadow bg-base-100 rounded-box  ${visible ? 'block' : 'hidden'}`}>
               <MenuLg />
             </div>
-          </div>
-
-
-          
+          </div>  
         </div>
       </div>
 
