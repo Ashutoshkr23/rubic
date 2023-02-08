@@ -2,10 +2,100 @@ import React, { useState, useEffect, useContext } from 'react';
 import Menu1 from './Menu1'
 import Menu2 from './Menu2'
 import { DarkModeContext, SwapActiveContext , ShowContentContext } from "./Context";
-import SDK, { BLOCKCHAIN_NAME, Configuration } from 'rubic-sdk';
+import { BLOCKCHAIN_NAME, BlockchainName, CrossChainTrade, InstantTrade, SDK } from "rubic-sdk";
+import { configuration } from '../constants/sdk-config';
+import { tokens } from "../constants/tokens";
 
 
 function Main() {
+
+
+    useEffect(() => {
+
+        const rubicSdkSetup = async () => {
+            try {
+
+                console.log("🚀 ~ file: Home.container.jsx:66 ~ rubicSdkSetup ~ config", configuration)
+                const sdk = await SDK.createSDK(configuration);
+                console.log("🚀 ~ file: Home.container.jsx:71 ~ rubicSdkSetup ~ sdk", sdk)
+
+                const newConfiguration = {
+                    ...configuration,
+                    walletProvider: {
+                        core: window.ethereum,
+                        address: "0x1b8945FE009ec07eE4ad80401816e93f339619B6", // Wallet Address
+                        chainId: 1,
+                    },
+                };
+
+                await sdk.updateConfiguration(newConfiguration);
+
+                const fromToken = {
+                    blockchain: BLOCKCHAIN_NAME.ETHEREUM,
+                    address: '0x0000000000000000000000000000000000000000' // ETH
+                };
+                const fromAmount = 1;
+                const toTokenAddress = '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d'; //USDT
+
+                // calculate trades
+                const trades = await sdk?.onChainManager?.calculateTrade(fromToken, fromAmount, toTokenAddress);
+                console.log("🚀 ~ file: Home.container.jsx:82 ~ rubicSdkSetup ~ trades", trades)
+                const bestTrade = trades[0];
+
+                // Define trade parametres
+                const fromToken1 = {
+                    blockchain: BLOCKCHAIN_NAME.ETHEREUM,
+                    address: '0x0000000000000000000000000000000000000000'
+                };
+                const fromAmount1 = 1;
+                const toToken1 = {
+                    blockchain: BLOCKCHAIN_NAME.BINANCE_SMART_CHAIN,
+                    address: '0xe9e7cea3dedca5984780bafc599bd69add087d56'
+                };
+
+                // calculated trades
+                const crossChain = await sdk.crossChainManager.calculateTrade(fromToken1, fromAmount1, toToken1);
+                console.log("🚀 ~ file: Home.container.jsx:137876 ~ rubicSdkSetup ~ crossChain", crossChain)
+                const bestcrossChain = crossChain[0];
+
+
+                //
+                
+
+                // trades.forEach((trade) => {
+                //   const tradeType = trade.type;
+                //   console.log("🚀 ~ file: Home.container.jsx:98 ~ trades.forEach ~ tradeType", tradeType)
+
+                //   if (trade instanceof OnChainTrade) {
+                //     console.log("🚀 ~ file: Home.container.jsx:102 ~ trades.forEach ~ trade", trade)
+                //     console.log(`to amount: ${trade.to.tokenAmount.toFormat(3)}`);
+                //   } else {
+                //     // console.log("E")
+                //     console.log("🚀 ~ file: Home.container.jsx:102 ~ trades.forEach ~ trade.error", trade.error)
+                //     // console.log(`error: ${trade.error}`);
+                //   }
+
+                //   // explore trades info
+                //   if (trade instanceof EvmOnChainTrade) {
+                //     console.log(`Gas fee: ${bestTrade.gasFeeInfo}`);
+                //   }
+                // });
+
+                // const onConfirm = (hash) => console.log(hash);
+
+                // // check that trade is defined
+                // const receipt = await bestTrade.swap({ onConfirm });
+
+                // console.log("receipt", receipt);
+
+            } catch (error) {
+                console.log("🚀 ~ file: Home.container.jsx:137 ~ rubicSdkSetup ~ ERROR: ", error)
+                console.log("error.....123", error)
+            }
+        };
+
+        rubicSdkSetup();
+    }, []);
 
     
     const [visible, setVisible] = useState(false);
