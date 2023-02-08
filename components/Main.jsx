@@ -1,25 +1,134 @@
 import React, { useState, useEffect, useContext } from 'react';
-import Menu1 from '../components/Menu1'
-import Menu2 from '../components/Menu2'
-import { DarkModeContext, SwapActiveContext , ShowContentContext } from "../components/Context";
+import Menu1 from './Menu1'
+import Menu2 from './Menu2'
+import { DarkModeContext, SwapActiveContext , ShowContentContext } from "./Context";
+import { BLOCKCHAIN_NAME, BlockchainName, CrossChainTrade, InstantTrade, SDK } from "rubic-sdk";
+import { configuration } from '../constants/sdk-config';
+import { tokens } from "../constants/tokens";
 
 
 function Main() {
 
+
+    useEffect(() => {
+
+        const rubicSdkSetup = async () => {
+            try {
+
+                console.log("🚀 ~ file: Home.container.jsx:66 ~ rubicSdkSetup ~ config", configuration)
+                const sdk = await SDK.createSDK(configuration);
+                console.log("🚀 ~ file: Home.container.jsx:71 ~ rubicSdkSetup ~ sdk", sdk)
+
+                const newConfiguration = {
+                    ...configuration,
+                    walletProvider: {
+                        core: window.ethereum,
+                        address: "0x1b8945FE009ec07eE4ad80401816e93f339619B6", // Wallet Address
+                        chainId: 1,
+                    },
+                };
+
+                await sdk.updateConfiguration(newConfiguration);
+
+                const fromToken = {
+                    blockchain: BLOCKCHAIN_NAME.ETHEREUM,
+                    address: '0x0000000000000000000000000000000000000000' // ETH
+                };
+                const fromAmount = 1;
+                const toTokenAddress = '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d'; //USDT
+
+                // calculate trades
+                const trades = await sdk?.onChainManager?.calculateTrade(fromToken, fromAmount, toTokenAddress);
+                console.log("🚀 ~ file: Home.container.jsx:82 ~ rubicSdkSetup ~ trades", trades)
+                const bestTrade = trades[0];
+
+                // Define trade parametres
+                const fromToken1 = {
+                    blockchain: BLOCKCHAIN_NAME.ETHEREUM,
+                    address: '0x0000000000000000000000000000000000000000'
+                };
+                const fromAmount1 = 1;
+                const toToken1 = {
+                    blockchain: BLOCKCHAIN_NAME.BINANCE_SMART_CHAIN,
+                    address: '0xe9e7cea3dedca5984780bafc599bd69add087d56'
+                };
+
+                // calculated trades
+                const crossChain = await sdk.crossChainManager.calculateTrade(fromToken1, fromAmount1, toToken1);
+                console.log("🚀 ~ file: Home.container.jsx:137876 ~ rubicSdkSetup ~ crossChain", crossChain)
+                const bestcrossChain = crossChain[0];
+
+
+                //
+                
+
+                // trades.forEach((trade) => {
+                //   const tradeType = trade.type;
+                //   console.log("🚀 ~ file: Home.container.jsx:98 ~ trades.forEach ~ tradeType", tradeType)
+
+                //   if (trade instanceof OnChainTrade) {
+                //     console.log("🚀 ~ file: Home.container.jsx:102 ~ trades.forEach ~ trade", trade)
+                //     console.log(`to amount: ${trade.to.tokenAmount.toFormat(3)}`);
+                //   } else {
+                //     // console.log("E")
+                //     console.log("🚀 ~ file: Home.container.jsx:102 ~ trades.forEach ~ trade.error", trade.error)
+                //     // console.log(`error: ${trade.error}`);
+                //   }
+
+                //   // explore trades info
+                //   if (trade instanceof EvmOnChainTrade) {
+                //     console.log(`Gas fee: ${bestTrade.gasFeeInfo}`);
+                //   }
+                // });
+
+                // const onConfirm = (hash) => console.log(hash);
+
+                // // check that trade is defined
+                // const receipt = await bestTrade.swap({ onConfirm });
+
+                // console.log("receipt", receipt);
+
+            } catch (error) {
+                console.log("🚀 ~ file: Home.container.jsx:137 ~ rubicSdkSetup ~ ERROR: ", error)
+                console.log("error.....123", error)
+            }
+        };
+
+        rubicSdkSetup();
+    }, []);
+
+    
     const [visible, setVisible] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const { isDarkMode } = useContext(DarkModeContext);
     const { swapActive } = useContext(SwapActiveContext);
     const { showContent } = useContext(ShowContentContext);
-    
-   
-    const [value, setValue] = useState('Enter the amount');
+    const [selectedToken1, setSelectedToken1] = useState("Select Token");
+    const [showOptions1, setShowOptions1] = useState(false);
 
+    const [selectedToken2, setSelectedToken2] = useState("Select Token");
+    const [showOptions2, setShowOptions2] = useState(false);
+    
+    
+
+    {/*to Show options to select token*/}
+    const handleTokenSelection2 = (token) => {
+        setSelectedToken2(token);
+        setShowOptions2(false);
+    };
+
+    const handleTokenSelection1 = (token) => {
+        setSelectedToken1(token);
+        setShowOptions1(false);
+    };
+    
+   {/*to take rhe text as input*/}
+    const [value, setValue] = useState('Enter the amount');
     const handleChange = (e) => {
         setValue(e.target.value);
         if (value === 'Enter the amount') setValue('');
     };
-
+    console.log()
     const inputRef = React.useRef(null);
 
     useEffect(() => {
@@ -127,7 +236,34 @@ function Main() {
 
                     </div>
                     <div className="flex justify-between items-center pt-7">
-                        <button className='w-32 h-9  bg-bg-green text-black rounded-full'>Select Token</button>
+                        <button
+                            className="w-32 h-9  mb-8 bg-bg-green text-black rounded-full"
+                            onClick={() => setShowOptions1(!showOptions1)}
+                        >
+                            {selectedToken1}
+                        </button>
+                        {showOptions1 && (
+                            <div className=" absolute top-56 mt-2 w-48 rounded-md shadow-lg">
+                                <div className="bg-white rounded-md shadow-xs">
+                                    <div className="py-1" role="menu" aria-orientation="vertical">
+                                        <button
+                                            className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
+                                            role="menuitem"
+                                            onClick={() => handleTokenSelection1("Ethereum")}
+                                        >
+                                            Ethereum
+                                        </button>
+                                        <button
+                                            className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
+                                            role="menuitem"
+                                            onClick={() => handleTokenSelection1("USDT")}
+                                        >
+                                            USDT
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
                         <div className="flex flex-col items-center">
                             <input
                                 type="text"
@@ -146,7 +282,35 @@ function Main() {
                         </button>
                         <div className="h-px w-60 bg-neutral-400"></div>
                     </div>
-                    <button className='w-32 h-9 mb-8  bg-bg-green text-black rounded-full'>Select Token</button>
+                    <div className='backdrop-blur'></div>
+                    <button
+                        className="w-32 h-9  mb-8 bg-bg-green text-black rounded-full"
+                        onClick={() => setShowOptions2(!showOptions2)}
+                    >
+                        {selectedToken2}
+                    </button>
+                    {showOptions2 && (
+                        <div className=" absolute top-96 mt-2 w-48 rounded-md shadow-lg">
+                            <div className="bg-white rounded-md shadow-xs">
+                                <div className="py-1" role="menu" aria-orientation="vertical">
+                                    <button
+                                        className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
+                                        role="menuitem"
+                                        onClick={() => handleTokenSelection2("Ethereum")}
+                                    >
+                                        Ethereum
+                                    </button>
+                                    <button
+                                        className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
+                                        role="menuitem"
+                                        onClick={() => handleTokenSelection2("USDT")}
+                                    >
+                                        USDT
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                     {showContent && (
                         <div>
                             <div className='flex h-12 py-3 mt-6 '>
