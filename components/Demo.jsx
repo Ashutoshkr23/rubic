@@ -1,55 +1,46 @@
 import React, { useState } from 'react';
-import MenuLg from '../components/MenuLg';
-import Menu from '../components/MenuLg'
-import NavbarSettingSm from '../components/NavSettingSm'
 
+const Demo = () => {
+    const [selectedToken2, setSelectedToken2] = useState("Select Token");
+    const [showOptions2, setShowOptions2] = useState(false);
 
-function Navbar() {
-
-
-    const [visible, setVisible] = useState(false);
-    const [isOpen, setIsOpen] = useState(false);
-
-    const handleClick = () => {
-        setIsOpen(!isOpen);
-        setVisible(!visible);
+    const handleTokenSelection2 = (token) => {
+        setSelectedToken2(token);
+        setShowOptions2(false);
     };
 
-
-
-
     return (
-        <div >
-            {/*For mobile and tablet*/}
-            <div className='lg:hidden'>
-                <div className='navbar px-4 py-8 bg-bg-black flex justify-items-end max-width-full'>
-
-                    <div className="relative dropdown dropdown-bottom dropdown-end">
-                        <button className='w-12 h-12 ml-80' onClick={handleClick} >
-                            <div className="relative btn btn-circle bg-transparent">
-                                <div className='  h-3.5 w-5'>
-                                    <div
-                                        className={`bg-white h-0.5 w-5 origin-top-left rounded-md ${isOpen ? 'rotate-45 translate-x-px' : 'rotate-0'}`}
-                                    />
-                                    <div
-                                        className={`bg-white h-0.5 w-5 rounded-md mt-1 ${isOpen ? 'hidden' : 'block'}`}
-                                    />
-                                    <div
-                                        className={`bg-white h-0.5 w-5  rounded-md mt-1 ${isOpen ? '-rotate-45 -translate-x-0.5 ' : 'rotate-0 '}`}
-                                    />
-                                </div>
-                            </div>
-                        </button>
-                        <div tabIndex={0} className={`dropdown-content  menu  shadow bg-base-100 rounded-box  ${visible ? 'block' : 'hidden'}`}>
-                            <MenuLg />
+        <div className="relative ml-80">
+            <button
+                className="w-32 h-9  mb-8 bg-bg-green text-black rounded-full"
+                onClick={() => setShowOptions2(!showOptions2)}
+            >
+                {selectedToken2}
+            </button>
+            {showOptions2 && (
+                <div className=" absolute top-8 mt-2 w-48 rounded-md shadow-lg">
+                    <div className="bg-white rounded-md shadow-xs">
+                        <div className="py-1" role="menu" aria-orientation="vertical">
+                            <button
+                                className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
+                                role="menuitem"
+                                onClick={() => handleTokenSelection2("Ethereum")}
+                            >
+                                Ethereum
+                            </button>
+                            <button
+                                className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
+                                role="menuitem"
+                                onClick={() => handleTokenSelection2("USDT")}
+                            >
+                                USDT
+                            </button>
                         </div>
                     </div>
-                    <div>
-                    </div>
                 </div>
-            </div>
+            )}
         </div>
-    )
-}
+    );
+};
+export default Demo;
 
-export default Navbar
