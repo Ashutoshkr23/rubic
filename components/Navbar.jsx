@@ -18,7 +18,7 @@ function Navbar() {
     setIsOpen(!isOpen);
     setVisible(!visible);
   };
-  
+
 
   
 
@@ -35,7 +35,7 @@ function Navbar() {
         <div className={`navbar px-4 py-8 flex justify-items-end max-width-full ${isDarkMode ? 'bg-bg-black' : 'bg-bg-white-dim'
           }`}>
           
-          <img className="mr-10 h-10 w-32" src={isDarkMode ? "./AMLlogo.png " : " ./AMLlogo.png "} />
+          <img className="mr-10 h-6 w-auto" src={isDarkMode ? "./AMLlogo.png " : " ./AMLlogo.png "} />
 
           {/* <button className={`w-24 h-12 px-2 py-3 ml-auto rounded-full ${isDarkMode ? 'bg-bg-grey' : 'bg-white'}`}> 
              <img className='w-4 h-4' src={isDarkMode ? "./rubic-light.svg " : " ./rubic-box-light.svg "} /><div className='ml-1'><p className={`text-${isDarkMode ? "White" : "black"}`}>Buy RBC</p></div></button> */}
@@ -79,7 +79,7 @@ function Navbar() {
       <div className='hidden lg:block ' >
         <div className={`navbar px-4 py-8 flex-row max-width-full ${isDarkMode ? 'bg-bg-black' : 'bg-bg-white-dim'
           }`}>
-          <img className="mr-10 h-10 w-32" src={isDarkMode ? "./AMLlogo.png " : " /AMLlogo.png "} />
+          <img className="mr-10 h-8 w-auto" src={isDarkMode ? "./AMLlogo.png " : " /AMLlogo.png "} />
 
           <div className=" relative dropdown dropdown-bottom dropdown-end">
             <button className='w-12 h-12 ' onClick={handleClick} >

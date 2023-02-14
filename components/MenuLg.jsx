@@ -19,11 +19,11 @@ function MenuLg() {
                 <img className="h-5 w-5 mr-4" src={isDarkMode ? "./icon-2.svg " : " ./icon-2-light.svg "} />
                 <h3 className={`text-lg ${isDarkMode ? "text-white" : "text-black"} hover:text-f-green`}>SDK</h3>
               </a> */}
-              <a href="https://rubic.exchange/team?_ga=2.158041274.1409416818.1675153611-1603743717.1674651356" className='flex h-11 items-center flex-column'>
+              <a href="https://alphamintlabs.com" className='flex h-11 items-center flex-column'>
                 <img className="h-5 w-5 mr-4" src={isDarkMode ? "./icon-3.svg " : " ./icon-3-light.svg "} />
                 <h3 className={`text-lg ${isDarkMode ? "text-white" : "text-black"} hover:text-f-green`}>Contact Us</h3>
               </a>
-              <a href="https://app.rubic.exchange/faq" className='flex h-11 items-center flex-column'>
+              <a href="https://alphamintlabs.com" className='flex h-11 items-center flex-column'>
                 <img className="h-5 w-5 mr-4" src={isDarkMode ? "./icon-4.svg " : " ./icon-4-light.svg "} />
                 <h3 className={`text-lg ${isDarkMode ? "text-white" : "text-black"} hover:text-f-green`}>FAQ</h3>
               </a>
@@ -54,11 +54,11 @@ function MenuLg() {
               <img className="h-5 w-5 mr-4" src={isDarkMode ? "./icon-2.svg " : " ./icon-2-light.svg "} />
               <h3 className={`text-lg ${isDarkMode ? "text-white" : "text-black"} hover:text-f-green`}>SDK</h3>
             </a> */}
-            <a href="https://rubic.exchange/team?_ga=2.158041274.1409416818.1675153611-1603743717.1674651356" className='flex h-11 items-center flex-column'>
+            <a href="https://alphamintlabs.com" className='flex h-11 items-center flex-column'>
               <img className="h-5 w-5 mr-4" src={isDarkMode ? "./icon-3.svg " : " ./icon-3-light.svg "} />
               <h3 className={`text-lg ${isDarkMode ? "text-white" : "text-black"} hover:text-f-green`}>Contact Us</h3>
             </a>
-            <a href="https://app.rubic.exchange/faq" className='flex h-11 items-center flex-column'>
+            <a href="https://alphamintlabs.com" className='flex h-11 items-center flex-column'>
               <img className="h-5 w-5 mr-4" src={isDarkMode ? "./icon-4.svg " : " ./icon-4-light.svg "} />
               <h3 className={`text-lg ${isDarkMode ? "text-white" : "text-black"} hover:text-f-green`}>FAQ</h3>
             </a>

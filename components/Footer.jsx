@@ -20,6 +20,9 @@ function Footer() {
           <a href="https://twitter.com/alphamintlabs" target="blank" className="w-11 h-8">
             <img className="w-6 h-6 hover:scale-125 inline-block" src={isDarkMode ? "./twitter.svg " : " ./Twitter-black.svg "} alt="icon" />
           </a>
+          <a href="https://www.instagram.com/alphamint.labs/" target="blank" className="w-11 h-8">
+            <img className="w-6 h-6 hover:scale-125 inline-block" src={isDarkMode ? "./instagram-light.ico " : " ./instagram-black.svg "} alt="icon" />
+          </a>
           {/* <a href="https://www.reddit.com/r/Rubic/new/" target="blank" className="w-11 h-8">
             <img src={isDarkMode ? "./reddit.svg " : " ./Reddit-black.svg "} alt="icon" className=" w-6 h-6 inline-block hover:scale-125" />
           </a>
@@ -55,7 +58,7 @@ function Footer() {
 
         </div>
         <div className=" flex flex-row flex-wrap justify-center items-center pb-16 " style={{ height: '80px', width: '320px', borderRadius: '19px', margin: 'auto' }}>
-          <p className='mx-2'>© Copyright AML 2023, powered by rubic</p>
+          <p className='m-auto'>© Copyright AML 2023</p>
         </div>
       </div>
 
@@ -72,8 +75,11 @@ function Footer() {
           <a href="https://www.facebook.com/RubicDEX/" target="blank" className="w-11 h-10">
             <img className="w-6 h-6 hover:scale-125 inline-block" src={isDarkMode ? "./fb.svg " : " ./fb-black.svg "} alt="icon" />
           </a>
-          <a href="https://twitter.com/CryptoRubic" target="blank" className="w-11 h-10">
+          <a href="https://twitter.com/alphamintlabs" target="blank" className="w-11 h-10">
             <img className="w-6 h-6 hover:scale-125 inline-block" src={isDarkMode ? "./twitter.svg " : " ./Twitter-black.svg "} alt="icon" />
+          </a>
+          <a href="https://www.instagram.com/alphamint.labs/" target="blank" className="w-11 h-10">
+            <img className="w-6 h-6 hover:scale-125 inline-block" src={isDarkMode ? "./instagram-light.ico " : " ./instagram-black.svg "} alt="icon" />
           </a>
           {/* <a href="https://www.reddit.com/r/Rubic/new/" target="blank" className="w-11 h-10">
             <img src={isDarkMode ? "./reddit.svg " : " ./Reddit-black.svg "} alt="icon" className=" w-6 h-6 hover:scale-125 inline-block" />
@@ -109,7 +115,7 @@ function Footer() {
 
         </div>
         <div className=" flex flex-row items-center pb-16 " style={{ height: '80px', width: '420px', borderRadius: '19px', margin: 'auto' }}>
-          <p className='mx-12'>© Copyright AML 2023, powered by rubic</p>
+          <p className='m-auto'>© Copyright AML 2023</p>
          
         </div>
       </div>

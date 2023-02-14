@@ -1,9 +1,28 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext , useEffect} from 'react';
 import { DarkModeContext } from "../components/Context";
 
-function NavSettingsLg(props) {
+ function NavSettingsLg(props) {
+
     const {visible1, setVisible1} = props;
     const { isDarkMode, setDarkMode } = useContext(DarkModeContext);
+
+    const [gasPrice, setGasPrice] = useState("")
+
+    useEffect(() => {
+
+        async function fetchGasPrice(){
+        const response = await fetch(`https://ethgasstation.info/api/ethgasAPI.json`)
+        const {average} = await response.json()
+        setGasPrice(average)
+
+        }
+
+
+
+        fetchGasPrice()
+    }, [])
+
+
     return (
         <div>
             <div className='lg:hidden' >
@@ -11,7 +30,7 @@ function NavSettingsLg(props) {
                     <div className='flex flex-col'></div>
                     <div>
                         <div className="flex justify-between">
-                            <p className={`${isDarkMode?"text-black":"text-white"}`}>Settings</p>
+                            <p className={`${isDarkMode?"text-white":"text-black"}`}>Settings</p>
                             <button onClick={() => setVisible1(!visible1)}><img src={isDarkMode ? "./Close.svg " : " ./Close-light.png "} alt="image" className="w-4 h-4 rounded-full" /></button>
                         </div>
                     </div>
@@ -36,7 +55,7 @@ function NavSettingsLg(props) {
                                     </label>
                                 </div>
                                 <h3 className={`font-bold pt-1.5 ${isDarkMode ? "text-white" : "text-black"}`}>Switch Theme</h3>
-                                <h5 className='text-neutral-300 pt-1 text-sm'>Theme for web</h5>
+                                <h5 className='text-neutral-500 pt-1 text-sm'>Theme for web</h5>
                             </div>
 
                             <div className={`px-4 py-4 bg-bg-grey-option rounded-xl mt-3 h-28 w-52 ${isDarkMode ? "bg-bg-grey-option" : "bg-bg-white-set-options"}`} >
@@ -45,16 +64,16 @@ function NavSettingsLg(props) {
                                     <img src="./goto.svg" alt="image" className="w-1.5 h-2.5 " />
                                 </div>
                                 <h3 className={`font-bold pt-1.5 ${isDarkMode ? "text-white" : "text-black"}`}>Language</h3>
-                                <h5 className='text-neutral-300 pt-1 text-sm'>Choose language</h5>
+                                <h5 className='text-neutral-500 pt-1 text-sm'>Choose language</h5>
                             </div>
 
                             <div className={`px-4 py-4 bg-bg-grey-option rounded-xl mt-3 h-28 w-52 ${isDarkMode ? "bg-bg-grey-option" : "bg-bg-white-set-options"}`} >
                                 <div className="flex justify-between">
                                     <img src={isDarkMode ? "./gas.svg " : " ./gas-light.svg "} alt="image" className="w-8 h-8 " />
-                                    <h5 className='text-neutral-300 pt-1 text-base'>14.70</h5>
+                                    <h5 className='text-neutral-500 pt-1 text-base'>{gasPrice}</h5>
                                 </div>
                                 <h3 className={`font-bold pt-1.5 ${isDarkMode ? "text-white" : "text-black"}`}>Gas Price</h3>
-                                <h5 className='text-neutral-300 pt-1 text-sm'>In Etherium chain</h5>
+                                <h5 className='text-neutral-500 pt-1 text-sm'>In Etherium chain</h5>
                             </div>
                             <div className={`px-4 py-4 bg-bg-grey-option rounded-xl mt-3 h-28 w-52 ${isDarkMode ? "bg-bg-grey-option" : "bg-bg-white-set-options"}`} >
                                 <div className="flex justify-between">
@@ -62,7 +81,7 @@ function NavSettingsLg(props) {
                                     <img src="./goto.svg" alt="image" className="w-1.5 h-2.5 " />
                                 </div>
                                 <h3 className={`font-bold pt-1.5 ${isDarkMode ? "text-white" : "text-black"}`}>Tutorials</h3>
-                                <h5 className='text-neutral-300 pt-1 text-sm'>How to use</h5>
+                                <h5 className='text-neutral-500 pt-1 text-sm'>How to use</h5>
                             </div>
                         </div>
                     </div>
@@ -70,8 +89,8 @@ function NavSettingsLg(props) {
             </div>
 
 
-            <div className='hidden lg:block'>
-                <div className={` rounded-box h-50 px-5 py-4 ${isDarkMode ? "bg-bg-grey-div" : "bg-bg-white-setting"}`} >
+            <div className='hidden lg:block border border-1 border-black rounded-2xl'>
+                <div className={` rounded-box h-50 px-5 py-4 ${isDarkMode ? "bg-bg-grey-div" : "bg-bg-white-setting "}`} >
                     <div>
                         <div className="flex justify-between">
                             <p className={`${isDarkMode ? "text-white" : "text-black"}`}>Settings</p>
@@ -99,7 +118,7 @@ function NavSettingsLg(props) {
                                     </label>
                                 </div>
                                 <h3 className={`font-bold pt-5 ${isDarkMode ? "text-white" : "text-black"}`}>Switch Theme</h3>
-                                <h5 className='text-neutral-300 pt-1 text-sm'>Theme for web</h5>
+                                <h5 className='text-neutral-500 pt-1 text-sm'>Theme for web</h5>
                             </div>
                             <div className={`px-4 py-5 bg-bg-grey-option rounded-xl mt-3 h-32  w-40 ${isDarkMode ? "bg-bg-grey-option" : "bg-bg-white-set-options"}`} >
                                 <div className="flex justify-between">
@@ -107,15 +126,15 @@ function NavSettingsLg(props) {
                                     <img src="./goto.svg" alt="image" className="w-1.5 h-2.5 " />
                                 </div>
                                 <h3 className={`font-bold pt-3 ${isDarkMode ? "text-white" : "text-black"}`}>Language</h3>
-                                <h5 className='text-neutral-300 pt-1 text-sm'>Choose Language</h5>
+                                <h5 className='text-neutral-500 pt-1 text-sm'>Choose Language</h5>
                             </div>
                             <div className={`px-4 py-5 bg-bg-grey-option rounded-xl mt-3 h-32  w-40 ${isDarkMode ? "bg-bg-grey-option" : "bg-bg-white-set-options"}`} >
                                 <div className="flex justify-between">
                                     <img src={isDarkMode ? "./gas.svg " : " ./gas-light.svg "} alt="image" className="w-8 h-8 " />
-                                    <h5 className='text-neutral-300 pt-1 text-base'>14.70</h5>
+                                    <h5 className='text-neutral-400 font-bold pt-1 text-base'>{gasPrice}</h5>
                                 </div>
                                 <h3 className={`font-bold pt-3 ${isDarkMode ? "text-white" : "text-black"}`}>Gas Price</h3>
-                                <h5 className='text-neutral-300 pt-1 text-sm'>In Etherium chain</h5>
+                                <h5 className='text-neutral-500 pt-1 text-sm'>In Etherium chain</h5>
                             </div>
                             <div className={`px-4 py-5 bg-bg-grey-option rounded-xl mt-3 h-32  w-40 ${isDarkMode ? "bg-bg-grey-option" : "bg-bg-white-set-options"}`} >
                                 <div className="flex justify-between">
@@ -123,7 +142,7 @@ function NavSettingsLg(props) {
                                     <img src="./goto.svg" alt="image" className="w-1.5 h-2.5 " />
                                 </div>
                                 <h3 className={`font-bold pt-3 ${isDarkMode ? "text-white" : "text-black"}`}>Tutorials</h3>
-                                <h5 className='text-neutral-300 pt-1 text-sm'>How to use</h5>
+                                <h5 className='text-neutral-500 pt-1 text-sm'>How to use</h5>
                             </div>
                         </div>
                     </div>
