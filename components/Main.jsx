@@ -63,7 +63,7 @@ function Main() {
                         
                     </div>
                     <div className="flex flex-col justify-between items-start gap-6 pt-7">
-                        <button className='w-32 h-9  bg-bg-green text-black rounded-full'>                        <p className={`text-${isDarkMode ? "white" : "black"} text-lg font-medium`}>Cross Chain</p></button>
+                        <button className='w-32 h-9  bg-bg-red text-black rounded-full'>                        <p className={`text-${isDarkMode ? "white" : "black"} text-lg font-medium`}>Cross Chain</p></button>
                         
                         <div className="flex flex-col items-center">
                             <input
@@ -85,7 +85,7 @@ function Main() {
                         
                  <div className="h-px w-60 bg-neutral-400"></div>
                     </div>
-                    <button className='w-32 h-9  mb-8 bg-bg-green text-black rounded-full'>                        <p className={`text-${isDarkMode ? "white" : "black"} text-lg  font-medium`}>Select Token</p></button>
+                    <button className='w-32 h-9  mb-8 bg-bg-red text-black rounded-full'>                        <p className={`text-${isDarkMode ? "white" : "black"} text-lg  font-medium`}>Select Token</p></button>
                     {showContent && (
                         <div>
                             <div className='flex h-11 mt-6 '>
@@ -98,7 +98,7 @@ function Main() {
                             </div>
                         </div>
                     )}
-                    <button className='w-full h-12 mt-4  bg-bg-green text-black rounded-full'>                        <p className={`text-${isDarkMode ? "white" : "black"} text-lg font-medium`}>Connect</p></button>
+                    <button className='w-full h-12 mt-4  bg-bg-red text-black rounded-full'>                        <p className={`text-${isDarkMode ? "white" : "black"} text-lg font-medium`}>Connect</p></button>
                 </div>
             </div>
             {/*For laptop*/}
@@ -127,7 +127,7 @@ function Main() {
 
                     </div>
                     <div className="flex justify-between items-center pt-7">
-                        <button className='w-32 h-9  bg-bg-green text-black rounded-full'>Select Token</button>
+                        <button className='w-32 h-9  bg-bg-red text-black rounded-full'>Select Token</button>
                         <div className="flex flex-col items-center">
                             <input
                                 type="text"
@@ -146,7 +146,7 @@ function Main() {
                         </button>
                         <div className="h-px w-60 bg-neutral-400"></div>
                     </div>
-                    <button className='w-32 h-9 mb-8  bg-bg-green text-black rounded-full'>Select Token</button>
+                    <button className='w-32 h-9 mb-8  bg-bg-red text-black rounded-full'>Select Token</button>
                     {showContent && (
                         <div>
                             <div className='flex h-12 py-3 mt-6 '>
@@ -159,7 +159,7 @@ function Main() {
                             </div>
                         </div>
                     )}
-                    <button className='w-full h-12 mt-4  bg-bg-green text-black rounded-full'>Connect Wallet</button>
+                    <button className='w-full h-12 mt-4  bg-bg-red text-black rounded-full'>Connect Wallet</button>
                    
                 </div>
             </div>

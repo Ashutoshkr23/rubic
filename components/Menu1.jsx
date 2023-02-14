@@ -39,8 +39,8 @@ function Menu1() {
                       <h3 className='text-base text-white'>Slippage tolerence</h3>
                       <img className="h-4 w-4 ml-1.5 " src="./info.svg" />
                   </div>
-                  <div class="flex mb-3 items-center">
-                      <button class="bg-bg-green h-9 w-16 mr-2.5 rounded-full text-black text-base ">Auto</button>
+                  <div className="flex mb-3 items-center">
+                      <button className="bg-bg-red h-9 w-16 mr-2.5 rounded-full text-black text-base ">Auto</button>
                       <div className="flex flex-col items-end">
                           <input
                               type="text"
@@ -54,7 +54,7 @@ function Menu1() {
                       <h3 className='text-base text-white'>Transaction deadline</h3>
                       <img className="h-4 w-4 ml-1.5 " src="./info.svg" />
                   </div>
-                  <div class="flex mb-3 items-center">
+                  <div className="flex mb-3 items-center">
                       <div className="flex flex-col items-end">
                           <input
                               type="text"
@@ -77,7 +77,7 @@ function Menu1() {
                               checked={isToggled}
                               onChange={() => setIsToggled(!isToggled)}
                           />
-                          <span className={`toggle-slider rounded-full w-8 h-4 shadow-inner ${isToggled ? 'bg-slate-300' : 'bg-bg-green'
+                          <span className={`toggle-slider rounded-full w-8 h-4 shadow-inner ${isToggled ? 'bg-slate-300' : 'bg-bg-red'
                               }`}></span>
                           <span
                               className={`toggle-button absolute w-3 h-3 my-0.5 rounded-full bg-black shadow inset-y-0 transition-all duration-200 ease-in-out ${isToggled ? 'left-0.5 ' : 'right-0.5'
@@ -97,7 +97,7 @@ function Menu1() {
                               checked={isToggled}
                               onChange={() => setIsToggled(!isToggled)}
                           />
-                          <span className={`toggle-slider rounded-full w-8 h-4 shadow-inner ${isToggled ? 'bg-slate-300' : 'bg-bg-green'
+                          <span className={`toggle-slider rounded-full w-8 h-4 shadow-inner ${isToggled ? 'bg-slate-300' : 'bg-bg-red'
                               }`}></span>
                           <span
                               className={`toggle-button absolute w-3 h-3 my-0.5 rounded-full bg-black shadow inset-y-0 transition-all duration-200 ease-in-out ${isToggled ? 'left-0.5 ' : 'right-0.5'

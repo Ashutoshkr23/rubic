@@ -27,7 +27,7 @@ function NavSettingsLg(props) {
                                             checked={isDarkMode}
                                             onChange={() => setDarkMode(!isDarkMode)}
                                         />
-                                        <span className={`toggle-slider rounded-full w-12 h-6 shadow-inner ${isDarkMode ? 'bg-bg-green' : 'bg-white'
+                                        <span className={`toggle-slider rounded-full w-12 h-6 shadow-inner ${isDarkMode ? 'bg-bg-red' : 'bg-white'
                                             }`}></span>
                                         <span
                                             className={`toggle-button absolute w-4 h-4 my-1 rounded-full bg-black shadow inset-y-0 transition-all duration-200 ease-in-out ${isDarkMode ? 'right-1 ' : 'left-1'
@@ -90,7 +90,7 @@ function NavSettingsLg(props) {
                                             checked={isDarkMode}
                                             onChange={() => setDarkMode(!isDarkMode)}
                                         />
-                                        <span className={`toggle-slider rounded-full w-12 h-6 shadow-inner ${isDarkMode ? 'bg-bg-green' : 'bg-white'
+                                        <span className={`toggle-slider rounded-full w-12 h-6 shadow-inner ${isDarkMode ? 'bg-bg-red' : 'bg-white'
                                             }`}></span>
                                         <span
                                             className={`toggle-button absolute w-4 h-4 my-1 rounded-full bg-black shadow inset-y-0 transition-all duration-200 ease-in-out ${isDarkMode ? 'right-1 ' : 'left-1'

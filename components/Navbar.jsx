@@ -35,19 +35,20 @@ function Navbar() {
         <div className={`navbar px-4 py-8 flex justify-items-end max-width-full ${isDarkMode ? 'bg-bg-black' : 'bg-bg-white-dim'
           }`}>
           
-          <img className="mr-10 h-10 w-32" src={isDarkMode ? "./rubic-logo.svg " : " ./Rubic-logo-light.svg "} />
+          <img className="mr-10 h-10 w-32" src={isDarkMode ? "./AMLlogo.png " : " ./AMLlogo.png "} />
 
-          <button className={`w-24 h-12 px-2 py-3 ml-auto rounded-full ${isDarkMode ? 'bg-bg-grey' : 'bg-white'}`}> 
-             <img className='w-4 h-4' src={isDarkMode ? "./rubic-light.svg " : " ./rubic-box-light.svg "} /><div className='ml-1'><p className={`text-${isDarkMode ? "White" : "black"}`}>Buy RBC</p></div></button>
+          {/* <button className={`w-24 h-12 px-2 py-3 ml-auto rounded-full ${isDarkMode ? 'bg-bg-grey' : 'bg-white'}`}> 
+             <img className='w-4 h-4' src={isDarkMode ? "./rubic-light.svg " : " ./rubic-box-light.svg "} /><div className='ml-1'><p className={`text-${isDarkMode ? "White" : "black"}`}>Buy RBC</p></div></button> */}
 
-
-          <div className="relative dropdown ml-4 dropdown-bottom dropdown-end">
+          <div className='ml-auto'>
+          <div className=" relative dropdown ml-4 dropdown-bottom dropdown-end">
             <button className='w-12 h-12' onClick={() => setVisible1(!visible1)} >
               <img div className='w-6 h-6' src={isDarkMode ? "./setting.svg " : " ./Setting-light.svg "} />
             </button>
             <div tabIndex={0} className={`dropdown-content  menu  shadow bg-base-100 rounded-box  ${visible1 ? 'block' : 'hidden'}`}>
               <NavbarSettingsLg visible1={visible1} setVisible1={setVisible1} />
             </div>
+          </div>
           </div>
 
           <div className="relative dropdown dropdown-bottom dropdown-end">
@@ -75,12 +76,12 @@ function Navbar() {
 
 
       {/*for large screen */}
-      <div className='hidden lg:block'>
-        <div className={`navbar px-4 py-8  flex justify-items-end max-width-full ${isDarkMode ? 'bg-bg-black' : 'bg-bg-white-dim'
+      <div className='hidden lg:block ' >
+        <div className={`navbar px-4 py-8 flex-row max-width-full ${isDarkMode ? 'bg-bg-black' : 'bg-bg-white-dim'
           }`}>
-          <img className="mr-10 h-10 w-32" src={isDarkMode ? "./rubic-logo.svg " : " ./Rubic-logo-light.svg "} />
+          <img className="mr-10 h-10 w-32" src={isDarkMode ? "./AMLlogo.png " : " /AMLlogo.png "} />
 
-          <div className="relative dropdown dropdown-bottom dropdown-end">
+          <div className=" relative dropdown dropdown-bottom dropdown-end">
             <button className='w-12 h-12 ' onClick={handleClick} >
                 <div className={`relative btn border-none btn-circle bg-transparent ${isDarkMode ? 'hover:bg-bg-grey-light' : 'hover:bg-white'}`}>
                 <div className='  h-3.5 w-5'>
@@ -96,7 +97,7 @@ function Navbar() {
                 </div>
               </div>
             </button>
-            <div tabIndex={0} className={`dropdown-content  menu  shadow bg-base-100 rounded-box  ${visible ? 'block' : 'hidden'}`}>
+            <div tabIndex={0} className={` dropdown-content  menu  shadow bg-base-100 rounded-box  ${visible ? 'block' : 'hidden'}`}>
               <MenuLg />
             </div>
           </div>
@@ -111,10 +112,10 @@ function Navbar() {
             </button>
           </div>
           
-          <button className={`w-44 h-12 px-9 py-3 ml-auto rounded-full ${isDarkMode ? 'bg-bg-grey' : 'bg-white'}`}> <img className='w-5 h-6' src={isDarkMode ? "./rubic-light.svg " : " ./rubic-box-light.svg "} /><div className='ml-2'><p className={`text-${isDarkMode ? "white" : "black"}`}>Buy RBC</p></div></button>
+          {/* <button className={`w-44 h-12 px-9 py-3 ml-auto rounded-full ${isDarkMode ? 'bg-bg-grey' : 'bg-white'}`}> <img className='w-5 h-6' src={isDarkMode ? "./rubic-light.svg " : " ./rubic-box-light.svg "} /><div className='ml-2'><p className={`text-${isDarkMode ? "white" : "black"}`}>Buy RBC</p></div></button> */}
 
-          <div>
-            <button className='w-44 h-12 mx-8 px-6 bg-bg-green text-black rounded-full'><p className={`text-${isDarkMode ? "black" : "white"}`}>Connect Wallet</p></button>
+          <div className='ml-auto'>
+            <button className='w-44 h-12  mx-8 px-6 bg-bg-red text-black rounded-full'><p className={`text-${isDarkMode ? "black" : "white"}`}>Connect Wallet</p></button>
           </div>
 
           <div className="relative dropdown dropdown-bottom dropdown-end">

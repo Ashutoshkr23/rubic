@@ -20,12 +20,15 @@ module.exports = {
         "bg-white": "rgba(255, 255, 255, 1)",
         "bg-white-setting": "rgba(250, 250, 250, 1)",
         "bg-white-set-options": "rgba(242, 242, 242, 1)",
+        "bg-red": "rgba(235, 64, 52, 1)",
+
 
 
 
       },
       colors:{
         "f-green": "rgba(0, 226, 142, 1)",
+        "f-red": "rgba(235, 64, 52,1)",
         "border-light": "rgba(52, 52, 52, 1)",
         
       }
